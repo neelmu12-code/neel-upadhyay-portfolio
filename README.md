@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Neel Upadhyay Portfolio
 
 Static portfolio site built to work well on GitHub Pages with no build step.
@@ -28,3 +29,6 @@ Because this is a plain static site, there is no build setup to manage.
 - `assets/resume/Neel_Upadhyay_SResume.pdf`
 - `assets/resume/Neel_Upadhyay_CResume.pdf`
 - `assets/resume/Neel_Upadhyay_HResume.pdf`
+=======
+# neel-upadhyay-portfolio
+>>>>>>> 4bb21f58a929565f173247c0a8f4c1efc4d65667

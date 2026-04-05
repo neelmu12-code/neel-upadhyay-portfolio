@@ -15,7 +15,7 @@
   --radius-lg: 28px;
   --radius-md: 20px;
   --radius-sm: 14px;
-  --max-width: 1160px;
+  --max-width: 1360px;
   --font-display: "Space Grotesk", "Avenir Next", "Trebuchet MS", sans-serif;
   --font-body: "Space Grotesk", "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", Consolas, monospace;
@@ -66,7 +66,7 @@ a.button {
   position: relative;
   width: min(100%, var(--max-width));
   margin: 0 auto;
-  padding: 24px 20px 56px;
+  padding: 30px 28px 72px;
 }
 
 .site-header,
@@ -82,9 +82,9 @@ a.button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  padding: 16px 18px;
-  margin-bottom: 30px;
+  gap: 24px;
+  padding: 18px 24px;
+  margin-bottom: 42px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: rgba(7, 15, 24, 0.76);
@@ -146,8 +146,8 @@ a.button {
 }
 
 .section {
-  margin-bottom: 26px;
-  padding: 34px;
+  margin-bottom: 34px;
+  padding: 46px;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background:
@@ -159,7 +159,7 @@ a.button {
 .hero {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 28px;
+  gap: 42px;
   overflow: hidden;
 }
 
@@ -211,10 +211,10 @@ a.button {
 }
 
 .hero-summary {
-  max-width: 64ch;
-  margin: 20px 0 0;
-  font-size: 1.05rem;
-  line-height: 1.75;
+  max-width: 68ch;
+  margin: 24px 0 0;
+  font-size: 1.08rem;
+  line-height: 1.82;
 }
 
 .hero-actions,
@@ -268,7 +268,7 @@ a.button {
 
 .hero-panel {
   display: grid;
-  gap: 18px;
+  gap: 24px;
   align-content: start;
 }
 
@@ -286,7 +286,7 @@ a.button {
 }
 
 .signal-card {
-  padding: 22px;
+  padding: 26px;
 }
 
 .status-card,
@@ -317,7 +317,7 @@ a.button {
 .metric-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 18px;
 }
 
 .metric-grid strong {
@@ -338,16 +338,16 @@ a.button {
 .project-highlights,
 .experience-points {
   display: grid;
-  gap: 10px;
-  margin: 14px 0 0;
+  gap: 12px;
+  margin: 16px 0 0;
   padding-left: 18px;
   color: var(--muted);
-  line-height: 1.65;
+  line-height: 1.75;
 }
 
 .section-heading {
   max-width: 62ch;
-  margin-bottom: 22px;
+  margin-bottom: 30px;
 }
 
 .section-heading h2 {
@@ -363,7 +363,7 @@ a.button {
 .experience-grid,
 .resume-grid {
   display: grid;
-  gap: 18px;
+  gap: 24px;
 }
 
 .focus-grid {
@@ -371,8 +371,8 @@ a.button {
 }
 
 .panel {
-  padding: 22px;
-  min-height: 220px;
+  padding: 28px;
+  min-height: 250px;
 }
 
 .panel h3 {
@@ -387,11 +387,11 @@ a.button {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 24px;
 }
 
 .project-card {
-  padding: 24px;
+  padding: 30px;
   min-height: 100%;
 }
 
@@ -428,14 +428,14 @@ a.button {
 }
 
 .experience-card {
-  padding: 24px;
+  padding: 30px;
 }
 
 .experience-head {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 18px;
+  gap: 24px;
 }
 
 .experience-meta {
@@ -446,29 +446,29 @@ a.button {
 .skills-layout {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 18px;
+  gap: 24px;
 }
 
 .skills-card,
 .education-card {
-  padding: 24px;
+  padding: 30px;
 }
 
 .skill-group + .skill-group {
-  margin-top: 24px;
+  margin-top: 28px;
 }
 
 .chip-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 
 .chip-row span {
   display: inline-flex;
   align-items: center;
-  min-height: 36px;
-  padding: 0 12px;
+  min-height: 38px;
+  padding: 0 14px;
   border: 1px solid rgba(120, 152, 179, 0.18);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.02);
@@ -482,19 +482,19 @@ a.button {
 }
 
 .cert-box {
-  margin-top: 26px;
-  padding-top: 22px;
+  margin-top: 30px;
+  padding-top: 26px;
   border-top: 1px solid var(--line);
 }
 
 .resume-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 
 .resume-card {
   display: block;
-  padding: 22px;
+  padding: 26px;
   transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
@@ -519,23 +519,56 @@ a.button {
 
 .contact-panel {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 20px;
-  padding: 24px;
+  gap: 32px;
+  padding: 30px;
+}
+
+.contact-details {
+  display: grid;
+  gap: 16px;
+  min-width: min(100%, 340px);
+}
+
+.contact-email {
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .site-footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 12px 18px;
-  padding: 18px 8px 0;
+  align-items: center;
+  gap: 12px 24px;
+  padding: 6px 6px 0;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 0.88rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.contact-email:hover,
+.contact-links a:hover,
+.site-footer a:hover {
+  color: var(--text);
 }
 
 .reveal {
@@ -583,7 +616,7 @@ a.button {
 
 @media (max-width: 720px) {
   .page-shell {
-    padding: 16px 14px 42px;
+    padding: 18px 14px 48px;
   }
 
   .site-header {
@@ -597,7 +630,7 @@ a.button {
   }
 
   .section {
-    padding: 24px 18px;
+    padding: 28px 20px;
   }
 
   .hero h1 {
@@ -614,8 +647,14 @@ a.button {
   }
 
   .hero-actions,
-  .contact-actions {
+  .contact-actions,
+  .contact-links {
     flex-direction: column;
+  }
+
+  .contact-details {
+    width: 100%;
+    min-width: 0;
   }
 }
 
