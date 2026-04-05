@@ -1,0 +1,7 @@
+{
+  "name": "neel-upadhyay-portfolio",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  }
+}
