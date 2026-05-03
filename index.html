@@ -82,10 +82,21 @@
           </div>
 
           <div class="hero-panel">
-            <article class="signal-card status-card">
-              <p class="card-label">Current Track</p>
-              <h2>Honours BEng in Software Engineering</h2>
-              <p>York University | Cybersecurity Stream | Expected graduation: December 2026</p>
+            <article class="signal-card status-card profile-card">
+              <div class="portrait-frame">
+                <img
+                  src="assets/images/neel-upadhyay-portrait.jpg"
+                  alt="Portrait of Neel Upadhyay"
+                  width="400"
+                  height="400"
+                  decoding="async"
+                />
+              </div>
+              <div>
+                <p class="card-label">Current Track</p>
+                <h2>Honours BEng in Software Engineering</h2>
+                <p>York University | Cybersecurity Stream | Expected graduation: December 2026</p>
+              </div>
             </article>
 
             <article class="signal-card metric-card">
@@ -173,37 +184,60 @@
 
           <div class="project-grid">
             <article class="project-card project-card-featured">
+              <figure class="project-visual project-visual-prototype">
+                <img
+                  src="assets/images/anpr-capstone-prototype.jpeg"
+                  alt="Edge AI hardware prototype for Neel Upadhyay's real-time ANPR parking project"
+                  width="900"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Edge AI hardware prototype</figcaption>
+              </figure>
               <div class="project-meta">
                 <span>2025 - 2026</span>
                 <span>Python | AWS EC2 | WebSockets | React | SQL | Jetson Nano</span>
               </div>
               <h3>Real-Time ANPR and Parking Lot Monitoring System</h3>
               <p>
-                Built a live vehicle monitoring platform that performs plate detection at the edge,
-                streams structured results to AWS, and displays updates in real time for security
-                staff.
+                Built a real-time ANPR parking platform that uses camera input and Jetson-based
+                inference at the edge, attaches GPS metadata to detections, and sends structured
+                events to a backend dashboard for operators.
               </p>
               <ul class="project-highlights">
-                <li>Designed an AWS EC2 backend with WebSocket support and a Python REST API.</li>
-                <li>Logged detections into a normalized SQL schema for history and analytics.</li>
-                <li>Built a React dashboard for live entries, search, and real-time updates.</li>
+                <li>Designed edge-to-cloud communication with a Python REST API and AWS backend.</li>
+                <li>Logged license plate detections with GPS metadata in SQL for search and history.</li>
+                <li>Built dashboard-facing APIs and live updates for real-time security monitoring.</li>
               </ul>
             </article>
 
             <article class="project-card">
+              <figure class="project-visual">
+                <img
+                  src="assets/images/omni-nexus-auctions-screenshot.png"
+                  alt="Omni-Nexus Auctions screenshot showing a full-stack auction platform with live item cards"
+                  width="1920"
+                  height="1030"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Full-stack auction platform</figcaption>
+              </figure>
               <div class="project-meta">
                 <span>2025 - 2026</span>
-                <span>Spring Boot | Java | MySQL | Docker | JWT | React</span>
+                <span>Spring Boot | REST APIs | SQL/JDBC | Auth | Docker</span>
               </div>
               <h3>Auction e-Commerce Platform Microservices</h3>
               <p>
-                Developed a microservices-based auction platform with isolated schemas, secure
-                gateway routing, and an AI-powered assistant layered into the product flow.
+                Built Omni-Nexus Auctions as a backend-driven marketplace demonstrating item
+                listings, live auctions, user accounts, authentication, and full-stack auction
+                flows, with Docker and microservice boundaries planned for deployment.
               </p>
               <ul class="project-highlights">
-                <li>Split the platform into 6 Spring Boot services with dedicated MySQL schemas.</li>
-                <li>Secured the API gateway with JWT validation, route protection, and sanitization.</li>
-                <li>Integrated an AI auction assistant backed by Gemini and Tavily search.</li>
+                <li>Designed Spring Boot REST APIs for listings, bids, accounts, and auction state.</li>
+                <li>Used SQL/JDBC persistence patterns for backend-driven marketplace data.</li>
+                <li>Planned Dockerized service boundaries around item, user, auction, and gateway flows.</li>
               </ul>
             </article>
 
