@@ -15,9 +15,9 @@
   <a href="mailto:neelmu12@gmail.com"><img src="https://img.shields.io/badge/Email-08111c?style=for-the-badge&logo=gmail&logoColor=ff7b35" alt="Email Neel Upadhyay" /></a>
 </p>
 
-<img src="./assets/neel-upadhyay-portrait.jpg" alt="Neel Upadhyay" width="150" align="right" />
-
 ## About me
+
+<img src="./assets/neel-upadhyay-portrait.jpg" alt="Neel Upadhyay" width="150" align="right" />
 
 I build backend, cloud-connected, and security-aware systems with a focus on reliable data flows and practical engineering. My work spans Spring Boot services, Python automation, AWS deployment, real-time edge-to-cloud pipelines, applied cryptography, and FPGA design.
 
