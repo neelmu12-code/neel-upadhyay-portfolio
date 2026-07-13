@@ -1,3 +1,50 @@
+# Neel Upadhyay — Portfolio
 
-# Neel Upadhyay Portfolio
+A responsive, dependency-free portfolio for Neel Upadhyay, a final-year Software Engineering student focused on backend systems, AWS cloud, and cybersecurity.
 
+![Portfolio brand artwork](assets/images/systems-cloud-security-banner.jpg)
+
+## Highlights
+
+- Project-led case studies spanning Spring Boot microservices, edge-to-cloud ANPR, applied cryptography, SIEM detection, and FPGA security
+- Current CompTIA Security+ and AWS Certified Cloud Practitioner credentials
+- Grouped language, framework, cloud, data, and security stack
+- Four role-specific résumé downloads
+- Responsive navigation, reduced-motion support, keyboard focus states, semantic metadata, and structured data
+- No production framework or runtime dependency
+
+## Run locally
+
+```powershell
+npm.cmd start
+```
+
+Then open [http://localhost:3000](http://localhost:3000).
+
+Run the JavaScript syntax checks with:
+
+```powershell
+npm.cmd test
+```
+
+## Project structure
+
+```text
+.
+├── assets/
+│   ├── images/          # Portrait, project proof, and generated brand artwork
+│   └── resume/          # Role-specific PDF résumés
+├── github-profile/      # Deploy-ready neelmu12-code profile README package
+├── index.html           # Portfolio content and metadata
+├── styles.css           # Responsive visual system
+├── script.js            # Navigation, reveal, and section state
+└── server.js            # Small local static server
+```
+
+## GitHub profile package
+
+The [GitHub profile README](github-profile/README.md) and its local assets are ready to publish in a public repository named `neelmu12-code/neelmu12-code`.
+
+## Live site
+
+[neelmu12-code.github.io/neel-upadhyay-portfolio](https://neelmu12-code.github.io/neel-upadhyay-portfolio/)

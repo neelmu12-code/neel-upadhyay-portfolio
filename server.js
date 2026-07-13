@@ -16,14 +16,17 @@ const contentTypes = {
   ".png": "image/png",
   ".svg": "image/svg+xml",
   ".txt": "text/plain; charset=utf-8",
+  ".webp": "image/webp",
+  ".xml": "application/xml; charset=utf-8",
 };
 
 const server = http.createServer((request, response) => {
   const requestPath = decodeURIComponent((request.url || "/").split("?")[0]);
   const relativePath = requestPath === "/" ? "index.html" : requestPath.replace(/^\/+/, "");
-  const filePath = path.normalize(path.join(root, relativePath));
+  const filePath = path.resolve(root, relativePath);
+  const relativeToRoot = path.relative(root, filePath);
 
-  if (!filePath.startsWith(root)) {
+  if (relativeToRoot.startsWith("..") || path.isAbsolute(relativeToRoot)) {
     response.writeHead(403, { "Content-Type": "text/plain; charset=utf-8" });
     response.end("Forbidden");
     return;
@@ -37,10 +40,14 @@ const server = http.createServer((request, response) => {
     }
 
     const extension = path.extname(filePath).toLowerCase();
+    const cacheControl = extension === ".html" ? "no-cache" : "public, max-age=3600";
     response.writeHead(200, {
       "Content-Type": contentTypes[extension] || "application/octet-stream",
+      "Cache-Control": cacheControl,
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "X-Content-Type-Options": "nosniff",
     });
-    response.end(data);
+    response.end(request.method === "HEAD" ? undefined : data);
   });
 });
 

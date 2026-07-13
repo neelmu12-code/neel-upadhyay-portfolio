@@ -3,465 +3,636 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Neel Upadhyay | Software Engineering Portfolio</title>
+    <title>Neel Upadhyay | Backend, Cloud &amp; Cybersecurity Portfolio</title>
     <meta
       name="description"
-      content="Portfolio for Neel Upadhyay, a York University Software Engineering student focused on backend systems, applied cybersecurity, and real-time platforms."
+      content="Neel Upadhyay is a final-year Software Engineering student building secure backend, cloud, and real-time systems with Java, Python, AWS, Spring Boot, and React."
     />
-    <meta name="theme-color" content="#08111c" />
+    <meta name="theme-color" content="#07111f" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://neelmu12-code.github.io/neel-upadhyay-portfolio/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Neel Upadhyay | Backend, Cloud &amp; Cybersecurity" />
+    <meta
+      property="og:description"
+      content="Secure backend systems, cloud infrastructure, and real-time products built with an engineering mindset."
+    />
+    <meta
+      property="og:url"
+      content="https://neelmu12-code.github.io/neel-upadhyay-portfolio/"
+    />
+    <meta
+      property="og:image"
+      content="https://neelmu12-code.github.io/neel-upadhyay-portfolio/assets/images/systems-cloud-security-banner.jpg"
+    />
+    <meta property="og:image:alt" content="Abstract cloud and cybersecurity systems artwork" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <script>document.documentElement.classList.add("js");</script>
     <link rel="stylesheet" href="styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Neel Upadhyay",
+        "url": "https://neelmu12-code.github.io/neel-upadhyay-portfolio/",
+        "image": "https://neelmu12-code.github.io/neel-upadhyay-portfolio/assets/images/neel-upadhyay-portrait.jpg",
+        "email": "mailto:neelmu12@gmail.com",
+        "jobTitle": "Software Engineering Student",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "York University"
+        },
+        "sameAs": [
+          "https://github.com/neelmu12-code",
+          "https://www.linkedin.com/in/neel-upadhyay-a458b3264/"
+        ],
+        "knowsAbout": [
+          "Backend Engineering",
+          "Cloud Computing",
+          "Cybersecurity",
+          "Java",
+          "Python",
+          "Spring Boot",
+          "Amazon Web Services"
+        ]
+      }
+    </script>
   </head>
+
   <body>
-    <div class="page-shell">
-      <header class="site-header" data-site-header>
-        <a class="brand" href="#top" aria-label="Go to top">
-          <span class="brand-mark">NU</span>
-          <span class="brand-text">Neel Upadhyay</span>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" data-site-header>
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="Neel Upadhyay, back to top">
+          <span class="brand-mark" aria-hidden="true">NU</span>
+          <span class="brand-copy">
+            <strong>Neel Upadhyay</strong>
+            <span>Software Engineering Student</span>
+          </span>
         </a>
 
-        <nav class="site-nav" aria-label="Primary">
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          data-nav-toggle
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span></span>
+          <span></span>
+        </button>
 
-      <main id="top">
-        <section class="section hero reveal">
-          <div class="hero-copy">
-            <p class="eyebrow">Software Engineering | Cybersecurity Stream | Ontario, Canada</p>
-            <h1>Building backend systems, secure software, and real-time products that hold up.</h1>
+        <nav class="site-nav" id="site-nav" aria-label="Primary" data-site-nav>
+          <a href="#credentials">Credentials</a>
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Stack</a>
+          <a class="nav-cta" href="#contact">Let's connect</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true">
+          <img
+            src="assets/images/systems-cloud-security-banner.jpg"
+            alt=""
+            width="1983"
+            height="793"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero-scrim" aria-hidden="true"></div>
+
+        <div class="hero-inner">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">
+              <span class="status-dot" aria-hidden="true"></span>
+              Final-year software engineering student · Available January 2027
+            </p>
+            <h1 id="hero-title">
+              I build systems that stay
+              <span>fast, secure, and useful.</span>
+            </h1>
             <p class="hero-summary">
-              I am a Software Engineering student at York University with hands-on experience across
-              backend APIs, cloud deployment, real-time monitoring, applied cryptography, and FPGA
-              design. My work spans Java, Python, AWS, React, SQL, Docker, and Verilog, with an
-              emphasis on systems that are reliable, fast, and security-aware.
+              I’m Neel, a Software Engineering student in York University’s Cybersecurity Stream.
+              I work across <strong>backend engineering</strong>, <strong>AWS cloud</strong>, and
+              <strong>applied security</strong>—from Spring Boot microservices to real-time edge
+              platforms and cryptographic systems.
             </p>
 
             <div class="hero-actions">
-              <a class="button button-primary" href="#projects">View Featured Projects</a>
+              <a class="button button-primary" href="#work">
+                See selected work <span aria-hidden="true">↘</span>
+              </a>
               <a
-                class="button button-secondary"
+                class="button button-ghost"
                 href="assets/resume/Neel_Upadhyay_SResume.pdf"
                 download
               >
-                Download Software Resume
+                Download résumé
               </a>
             </div>
 
-            <ul class="contact-strip" aria-label="Contact details">
-              <li>
-                <a href="mailto:neelmu12@gmail.com">neelmu12@gmail.com</a>
-              </li>
-              <li>
-                <a href="tel:+16472242484">647-224-2484</a>
-              </li>
-              <li>
-                <a href="https://github.com/neelmu12-code" target="_blank" rel="noreferrer">
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/neel-upadhyay-a458b3264/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
+            <nav class="hero-links" aria-label="Profile links">
+              <a href="mailto:neelmu12@gmail.com">Email <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/neelmu12-code" target="_blank" rel="noreferrer">
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/neel-upadhyay-a458b3264/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn <span aria-hidden="true">↗</span>
+              </a>
+            </nav>
           </div>
 
-          <div class="hero-panel">
-            <article class="signal-card status-card profile-card">
-              <div class="portrait-frame">
-                <img
-                  src="assets/images/neel-upadhyay-portrait.jpg"
-                  alt="Portrait of Neel Upadhyay"
-                  width="400"
-                  height="400"
-                  decoding="async"
-                />
-              </div>
-              <div>
-                <p class="card-label">Current Track</p>
-                <h2>Honours BEng in Software Engineering</h2>
-                <p>York University | Cybersecurity Stream | Expected graduation: December 2026</p>
-              </div>
-            </article>
+          <aside class="hero-profile reveal" aria-label="Neel Upadhyay profile summary">
+            <div class="portrait-wrap">
+              <img
+                src="assets/images/neel-upadhyay-portrait.jpg"
+                alt="Neel Upadhyay"
+                width="400"
+                height="400"
+                decoding="async"
+              />
+              <span class="portrait-ring" aria-hidden="true"></span>
+            </div>
+            <div class="profile-copy">
+              <p class="micro-label">Based in Ontario, Canada</p>
+              <h2>Backend · Cloud · Security</h2>
+              <p>Honours BEng, Software Engineering<br />Expected December 2026</p>
+            </div>
+            <div class="profile-certifications" role="list" aria-label="Latest certifications">
+              <span role="listitem">CompTIA Security+</span>
+              <span role="listitem">AWS Cloud Practitioner</span>
+            </div>
+          </aside>
+        </div>
 
-            <article class="signal-card metric-card">
-              <p class="card-label">Impact Snapshot</p>
-              <div class="metric-grid">
-                <div>
-                  <strong>6</strong>
-                  <span>Spring Boot services shipped in one platform</span>
-                </div>
-                <div>
-                  <strong>60%</strong>
-                  <span>Fewer manual entry errors at Manefa</span>
-                </div>
-                <div>
-                  <strong>30%</strong>
-                  <span>Operational efficiency lift from dashboards</span>
-                </div>
-                <div>
-                  <strong>15%</strong>
-                  <span>Data accuracy improvement at TJX</span>
-                </div>
-              </div>
-            </article>
+        <div class="proof-strip reveal" role="list" aria-label="Impact highlights">
+          <div role="listitem">
+            <strong>6</strong>
+            <span>Spring Boot services in one marketplace platform</span>
+          </div>
+          <div role="listitem">
+            <strong>60%</strong>
+            <span>reduction in manual-entry errors at Manefa</span>
+          </div>
+          <div role="listitem">
+            <strong>15%</strong>
+            <span>improvement in reporting data accuracy at TJX</span>
+          </div>
+          <div role="listitem">
+            <strong>2026</strong>
+            <span>Security+ and AWS Cloud Practitioner earned</span>
+          </div>
+        </div>
+      </section>
 
-            <article class="signal-card focus-card">
-              <p class="card-label">Core Strengths</p>
-              <ul class="focus-list">
-                <li>Backend APIs, microservices, WebSockets, and SQL-backed systems</li>
-                <li>Security-focused engineering with JWT, AES, and Double Ratchet concepts</li>
-                <li>Real-time pipelines from edge devices to cloud dashboards</li>
+      <section class="tech-ribbon" aria-label="Primary technology stack">
+        <p>Built with</p>
+        <ul>
+          <li>Java</li>
+          <li>Python</li>
+          <li>Spring Boot</li>
+          <li>React</li>
+          <li>AWS</li>
+          <li>Docker</li>
+          <li>SQL</li>
+          <li>Linux</li>
+        </ul>
+      </section>
+
+      <section class="section credentials reveal" id="credentials" aria-labelledby="credentials-title">
+        <div class="section-kicker">
+          <span>01</span>
+          <p>Credentials</p>
+        </div>
+        <div class="section-intro">
+          <p class="eyebrow">Industry credentials, applied in practice</p>
+          <h2 id="credentials-title">Cloud fluency. Security fundamentals. Engineering depth.</h2>
+          <p>
+            My certifications reinforce the systems work I build: understanding the cloud platform,
+            securing the architecture, and implementing the software cleanly.
+          </p>
+        </div>
+
+        <div class="credential-grid">
+          <article class="credential-card credential-card-featured">
+            <div class="credential-mark security-mark" aria-hidden="true">S+</div>
+            <div>
+              <p class="micro-label">CompTIA · Earned 2026</p>
+              <h3>Security+</h3>
+              <p>Threats, architecture, secure operations, risk, and incident response fundamentals.</p>
+            </div>
+            <span class="credential-status">Earned</span>
+          </article>
+
+          <article class="credential-card credential-card-featured">
+            <div class="credential-mark aws-mark" aria-hidden="true">AWS</div>
+            <div>
+              <p class="micro-label">Amazon Web Services · Earned 2026</p>
+              <h3>Certified Cloud Practitioner</h3>
+              <p>Cloud concepts, core AWS services, security, architecture, pricing, and support.</p>
+            </div>
+            <span class="credential-status">Earned</span>
+          </article>
+
+          <article class="credential-card credential-card-compact">
+            <div class="credential-mark google-mark" aria-hidden="true">GC</div>
+            <div>
+              <p class="micro-label">Google · 2025</p>
+              <h3>Cybersecurity Certificate</h3>
+            </div>
+          </article>
+
+          <article class="credential-card credential-card-compact">
+            <div class="credential-mark java-mark" aria-hidden="true">J</div>
+            <div>
+              <p class="micro-label">HackerRank · 2024</p>
+              <h3>Java Certificate</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section work-section" id="work" aria-labelledby="work-title">
+        <div class="section-kicker reveal">
+          <span>02</span>
+          <p>Selected work</p>
+        </div>
+        <div class="section-intro section-intro-split reveal">
+          <div>
+            <p class="eyebrow">Systems that leave the diagram</p>
+            <h2 id="work-title">From edge hardware to cloud APIs and operator dashboards.</h2>
+          </div>
+          <p>
+            My strongest projects connect multiple layers—devices, services, databases, security,
+            and UI—into a working whole.
+          </p>
+        </div>
+
+        <div class="featured-projects">
+          <article class="project project-anpr reveal">
+            <div class="project-image project-image-portrait">
+              <img
+                src="assets/images/anpr-capstone-prototype.jpeg"
+                alt="Jetson Nano hardware prototype for a real-time parking monitoring system"
+                width="900"
+                height="1600"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="image-label"><span></span> Physical prototype</div>
+            </div>
+            <div class="project-content">
+              <div class="project-number">01 / Real-time system</div>
+              <h3>Real-Time ANPR &amp; Parking Monitoring</h3>
+              <p>
+                A Jetson Nano edge system that turns camera detections into structured plate events,
+                enriches them with GPS metadata, and streams them to an AWS-hosted backend and live
+                React dashboard.
+              </p>
+              <ul class="project-results">
+                <li><strong>Edge → cloud</strong><span>Python REST API and WebSocket event flow</span></li>
+                <li><strong>Searchable history</strong><span>Normalized SQL detection records</span></li>
+                <li><strong>Operator view</strong><span>Live monitoring and security dashboard</span></li>
               </ul>
-            </article>
-          </div>
-        </section>
+              <div class="tag-row" role="list" aria-label="Project technologies">
+                <span role="listitem">Python</span><span role="listitem">AWS EC2</span><span role="listitem">React</span><span role="listitem">SQL</span><span role="listitem">WebSockets</span>
+              </div>
+            </div>
+          </article>
 
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">What I Build Best</p>
-            <h2>Software depth with security and systems range.</h2>
+          <article class="project project-auction reveal">
+            <div class="project-image project-image-screen">
+              <img
+                src="assets/images/omni-nexus-auctions-card.png"
+                alt="Omni-Nexus Auctions marketplace interface"
+                width="1200"
+                height="908"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="image-label"><span></span> Full-stack platform</div>
+            </div>
+            <div class="project-content">
+              <div class="project-number">02 / Platform</div>
+              <h3>Omni-Nexus Auction Microservices</h3>
+              <p>
+                A backend-driven auction marketplace organized across six Spring Boot services for
+                users, catalogue, auctions, payments, AI assistance, and gateway routing—with
+                isolated MySQL schemas and JWT-protected access.
+              </p>
+              <ul class="project-results">
+                <li><strong>6 services</strong><span>Clear service and data boundaries</span></li>
+                <li><strong>Secure gateway</strong><span>JWT validation and protected routes</span></li>
+                <li><strong>Repeatable runtime</strong><span>Docker Compose orchestration</span></li>
+              </ul>
+              <div class="tag-row" role="list" aria-label="Project technologies">
+                <span role="listitem">Java</span><span role="listitem">Spring Boot</span><span role="listitem">MySQL</span><span role="listitem">Docker</span><span role="listitem">React</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="project-lab reveal">
+          <article class="lab-card lab-card-security">
+            <div class="lab-icon" aria-hidden="true">//</div>
+            <p class="micro-label">Detection engineering</p>
+            <h3>SIEM &amp; Threat Hunting Lab</h3>
             <p>
-              My strongest work sits at the intersection of backend engineering, applied
-              cybersecurity, and real-time infrastructure.
+              Ingested Windows and Linux telemetry into Splunk and ELK, simulated controlled attack
+              activity, and built detections mapped to MITRE ATT&amp;CK.
             </p>
-          </div>
+            <div class="tag-row"><span>Splunk</span><span>ELK</span><span>MITRE ATT&amp;CK</span></div>
+          </article>
 
-          <div class="focus-grid">
-            <article class="panel">
-              <p class="panel-tag">Backend Systems</p>
-              <h3>APIs and service architecture</h3>
-              <p>
-                I build structured backend systems with Spring Boot, Python, SQL, JWT auth,
-                WebSockets, and Docker, focusing on reliability and clean service boundaries.
-              </p>
-            </article>
-
-            <article class="panel">
-              <p class="panel-tag">Applied Security</p>
-              <h3>Secure design beyond checklists</h3>
-              <p>
-                My project work includes Signal-style Double Ratchet messaging, AES-128 hardware
-                encryption, gateway protection, and secure data flow thinking.
-              </p>
-            </article>
-
-            <article class="panel">
-              <p class="panel-tag">Real-Time Platforms</p>
-              <h3>Live systems from edge to cloud</h3>
-              <p>
-                I enjoy building products that process live input, push updates in real time, and
-                expose usable dashboards for actual operators and decision-makers.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal" id="projects">
-          <div class="section-heading">
-            <p class="eyebrow">Featured Projects</p>
-            <h2>Projects grounded in cloud, security, and low-level engineering.</h2>
+          <article class="lab-card">
+            <div class="lab-icon" aria-hidden="true">DR</div>
+            <p class="micro-label">Applied cryptography</p>
+            <h3>Double Ratchet Messaging</h3>
             <p>
-              This portfolio pulls together the strongest material from my software, cybersecurity,
-              and hardware resumes into one recruiter-friendly view.
+              Implemented DH and symmetric KDF ratchets in Python to derive unique per-message keys,
+              supporting forward secrecy and break-in recovery.
             </p>
-          </div>
+            <div class="tag-row"><span>Python</span><span>Diffie-Hellman</span><span>AES</span></div>
+          </article>
 
-          <div class="project-grid">
-            <article class="project-card project-card-featured">
-              <figure class="project-visual project-visual-prototype">
-                <img
-                  src="assets/images/anpr-capstone-prototype.jpeg"
-                  alt="Edge AI hardware prototype for Neel Upadhyay's real-time ANPR parking project"
-                  width="900"
-                  height="1600"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>Edge AI hardware prototype</figcaption>
-              </figure>
-              <div class="project-meta">
-                <span>2025 - 2026</span>
-                <span>Python | AWS EC2 | WebSockets | React | SQL | Jetson Nano</span>
-              </div>
-              <h3>Real-Time ANPR and Parking Lot Monitoring System</h3>
-              <p>
-                Built a real-time ANPR parking platform that uses camera input and Jetson-based
-                inference at the edge, attaches GPS metadata to detections, and sends structured
-                events to a backend dashboard for operators.
-              </p>
-              <ul class="project-highlights">
-                <li>Designed edge-to-cloud communication with a Python REST API and AWS backend.</li>
-                <li>Logged license plate detections with GPS metadata in SQL for search and history.</li>
-                <li>Built dashboard-facing APIs and live updates for real-time security monitoring.</li>
-              </ul>
-            </article>
+          <article class="lab-card">
+            <div class="lab-icon" aria-hidden="true">128</div>
+            <p class="micro-label">Hardware security</p>
+            <h3>AES-128 on FPGA</h3>
+            <p>
+              Built the AES encryption and decryption pipeline at register-transfer level, including
+              key expansion, round transforms, memory, and FSM control.
+            </p>
+            <div class="tag-row"><span>Verilog</span><span>RTL</span><span>DE10-Lite</span></div>
+          </article>
 
-            <article class="project-card">
-              <figure class="project-visual">
-                <img
-                  src="assets/images/omni-nexus-auctions-screenshot.png"
-                  alt="Omni-Nexus Auctions screenshot showing a full-stack auction platform with live item cards"
-                  width="1920"
-                  height="1030"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>Full-stack auction platform</figcaption>
-              </figure>
-              <div class="project-meta">
-                <span>2025 - 2026</span>
-                <span>Spring Boot | REST APIs | SQL/JDBC | Auth | Docker</span>
-              </div>
-              <h3>Auction e-Commerce Platform Microservices</h3>
-              <p>
-                Built Omni-Nexus Auctions as a backend-driven marketplace demonstrating item
-                listings, live auctions, user accounts, authentication, and full-stack auction
-                flows, with Docker and microservice boundaries planned for deployment.
-              </p>
-              <ul class="project-highlights">
-                <li>Designed Spring Boot REST APIs for listings, bids, accounts, and auction state.</li>
-                <li>Used SQL/JDBC persistence patterns for backend-driven marketplace data.</li>
-                <li>Planned Dockerized service boundaries around item, user, auction, and gateway flows.</li>
-              </ul>
-            </article>
+          <article class="lab-card">
+            <div class="lab-icon" aria-hidden="true">&lt;/&gt;</div>
+            <p class="micro-label">Application security</p>
+            <h3>Web App Assessment</h3>
+            <p>
+              Identified SQL injection paths in a personal full-stack app, then remediated them with
+              parameterized queries and stronger input validation.
+            </p>
+            <div class="tag-row"><span>SQLMap</span><span>SQL</span><span>Remediation</span></div>
+          </article>
+        </div>
+      </section>
 
-            <article class="project-card">
-              <div class="project-meta">
-                <span>2025 - 2026</span>
-                <span>Python | Diffie-Hellman | KDF Chains | AES</span>
-              </div>
-              <h3>Double Ratchet Secure Messaging Protocol</h3>
-              <p>
-                Implemented a Signal-inspired secure messaging flow over email, combining a DH
-                ratchet with symmetric KDF chains to derive fresh encryption material per message.
-              </p>
-              <ul class="project-highlights">
-                <li>Generated a unique encryption key for every message exchange.</li>
-                <li>Enforced forward secrecy and break-in recovery across ratchet steps.</li>
-                <li>Focused on protocol behavior, key rotation, and resilient secure state changes.</li>
-              </ul>
-            </article>
+      <section class="section experience-section" id="experience" aria-labelledby="experience-title">
+        <div class="section-kicker reveal">
+          <span>03</span>
+          <p>Experience</p>
+        </div>
+        <div class="section-intro reveal">
+          <p class="eyebrow">Measured improvements, practical users</p>
+          <h2 id="experience-title">Engineering is most useful when it changes the work.</h2>
+        </div>
 
-            <article class="project-card">
-              <div class="project-meta">
-                <span>2025 - 2026</span>
-                <span>Verilog | DE10-Lite FPGA | RTL Design</span>
-              </div>
-              <h3>AES-128 Hardware Encryption on FPGA</h3>
-              <p>
-                Built AES-128 encryption and decryption at the register-transfer level, implementing
-                the cipher pipeline directly in Verilog on DE10-Lite hardware.
-              </p>
-              <ul class="project-highlights">
-                <li>Implemented SubBytes, ShiftRows, MixColumns, and AddRoundKey logic.</li>
-                <li>Designed modular support blocks including RAM, key expansion, and FSM control.</li>
-                <li>Created switch-driven input and addressing flow for hardware testing.</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal" id="experience">
-          <div class="section-heading">
-            <p class="eyebrow">Experience</p>
-            <h2>Work that improved decisions, speed, and data quality.</h2>
-          </div>
-
-          <div class="experience-grid">
-            <article class="experience-card">
-              <div class="experience-head">
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-date">
+              <span>2024</span>
+              <p>Sep — Dec</p>
+            </div>
+            <div class="timeline-marker" aria-hidden="true"><span></span></div>
+            <div class="timeline-content">
+              <div class="role-heading">
                 <div>
-                  <p class="panel-tag">TJX Companies</p>
+                  <p class="micro-label">TJX Companies · Mississauga, Ontario</p>
                   <h3>Real Estate Market Analyst Co-op</h3>
                 </div>
-                <div class="experience-meta">
-                  <span>Mississauga, ON</span>
-                  <span>Sept 2024 - Dec 2024</span>
-                </div>
+                <span class="role-type">Analytics &amp; automation</span>
               </div>
-              <ul class="experience-points">
-                <li>Automated reporting workflows with Python, improving data accuracy by 15%.</li>
-                <li>Analyzed population, competitor, and demographic trends for expansion decisions.</li>
-                <li>Built Excel dashboards to support retention and relocation strategy discussions.</li>
+              <ul>
+                <li>Automated Python reporting and validation workflows, improving data accuracy by 15%.</li>
+                <li>Analyzed demographic, competitor, and population trends for expansion decisions.</li>
+                <li>Built Excel dashboards supporting store retention and relocation strategy.</li>
               </ul>
-            </article>
+            </div>
+          </article>
 
-            <article class="experience-card">
-              <div class="experience-head">
+          <article class="timeline-item reveal">
+            <div class="timeline-date">
+              <span>2021–22</span>
+              <p>Jun — Aug</p>
+            </div>
+            <div class="timeline-marker" aria-hidden="true"><span></span></div>
+            <div class="timeline-content">
+              <div class="role-heading">
                 <div>
-                  <p class="panel-tag">Manefa Contracting Inc.</p>
+                  <p class="micro-label">Manefa Contracting · Brampton, Ontario</p>
                   <h3>Software Developer Intern</h3>
                 </div>
-                <div class="experience-meta">
-                  <span>Brampton, ON</span>
-                  <span>June 2021 - Aug 2022</span>
-                </div>
+                <span class="role-type">Internal systems</span>
               </div>
-              <ul class="experience-points">
-                <li>Built a Java plus SQL application that cut manual entry errors by 60%.</li>
-                <li>Developed real-time dashboards that boosted operational efficiency by 30%.</li>
-                <li>Designed modular reporting that let managers query multiple contracts at once.</li>
+              <ul>
+                <li>Built a Java and SQL material-cost system that cut manual-entry errors by 60%.</li>
+                <li>Developed live project dashboards that improved operational efficiency by 30%.</li>
+                <li>Created modular reporting for querying multiple active contracts at once.</li>
               </ul>
-            </article>
-          </div>
-        </section>
+            </div>
+          </article>
+        </div>
+      </section>
 
-        <section class="section reveal" id="skills">
-          <div class="section-heading">
-            <p class="eyebrow">Skills and Education</p>
-            <h2>Tools I use across application, cloud, and hardware work.</h2>
+      <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-kicker reveal">
+          <span>04</span>
+          <p>Technical stack</p>
+        </div>
+        <div class="section-intro section-intro-split reveal">
+          <div>
+            <p class="eyebrow">Languages, frameworks, cloud &amp; security</p>
+            <h2 id="skills-title">The right level of the stack for the problem.</h2>
           </div>
+          <p>
+            I’m most effective when I can trace the complete path—from protocol and service logic to
+            deployment, telemetry, and the interface a person actually uses.
+          </p>
+        </div>
 
-          <div class="skills-layout">
-            <article class="skills-card">
-              <div class="skill-group">
-                <p class="panel-tag">Languages</p>
-                <div class="chip-row">
-                  <span>Java</span>
-                  <span>Python</span>
-                  <span>C/C++</span>
-                  <span>SQL</span>
-                  <span>JavaScript</span>
-                  <span>TypeScript</span>
-                  <span>Verilog</span>
-                  <span>Bash</span>
-                </div>
+        <div class="stack-grid reveal">
+          <article class="stack-card stack-card-primary">
+            <div class="stack-heading">
+              <span class="stack-index">A</span>
+              <div>
+                <p class="micro-label">Languages</p>
+                <h3>Core building blocks</h3>
               </div>
+            </div>
+            <div class="skill-cloud skill-cloud-large">
+              <span>Java</span><span>Python</span><span>SQL</span><span>C / C++</span>
+              <span>JavaScript</span><span>TypeScript</span><span>Bash</span><span>Verilog</span>
+            </div>
+          </article>
 
-              <div class="skill-group">
-                <p class="panel-tag">Backend and Cloud</p>
-                <div class="chip-row">
-                  <span>REST APIs</span>
-                  <span>WebSockets</span>
-                  <span>Spring Boot</span>
-                  <span>JDBC</span>
-                  <span>Microservices</span>
-                  <span>JWT</span>
-                  <span>AWS EC2</span>
-                  <span>AWS S3</span>
-                  <span>Docker</span>
-                  <span>Linux</span>
-                  <span>Git</span>
-                  <span>WSL</span>
-                </div>
+          <article class="stack-card">
+            <div class="stack-heading">
+              <span class="stack-index">B</span>
+              <div>
+                <p class="micro-label">Frameworks &amp; backend</p>
+                <h3>Services and product layers</h3>
               </div>
+            </div>
+            <div class="skill-cloud">
+              <span>Spring Boot</span><span>React</span><span>REST APIs</span><span>WebSockets</span>
+              <span>JDBC</span><span>JWT</span><span>Microservices</span><span>HTML / CSS</span>
+            </div>
+          </article>
 
-              <div class="skill-group">
-                <p class="panel-tag">Frontend, Data, and Security</p>
-                <div class="chip-row">
-                  <span>React</span>
-                  <span>HTML/CSS</span>
-                  <span>SQL Schema Design</span>
-                  <span>Query Optimization</span>
-                  <span>Double Ratchet</span>
-                  <span>AES-128</span>
-                  <span>KDF Chains</span>
-                  <span>Hardware RTL</span>
-                </div>
+          <article class="stack-card stack-card-cloud">
+            <div class="stack-heading">
+              <span class="stack-index">C</span>
+              <div>
+                <p class="micro-label">Cloud, data &amp; delivery</p>
+                <h3>Reliable runtime</h3>
               </div>
-            </article>
+            </div>
+            <div class="skill-cloud">
+              <span>AWS EC2</span><span>AWS S3</span><span>Docker Compose</span><span>MySQL</span>
+              <span>Linux</span><span>Git</span><span>Postman</span><span>WSL</span>
+            </div>
+          </article>
 
-            <article class="education-card">
-              <p class="panel-tag">Education</p>
-              <h3>Lassonde School of Engineering, York University</h3>
-              <p class="education-subtitle">
-                Honours Bachelor of Engineering, Software Engineering
-              </p>
-              <p>Cybersecurity Stream</p>
-              <p>Sept 2022 - Dec 2026</p>
-
-              <div class="cert-box">
-                <p class="panel-tag">Certifications</p>
-                <ul class="experience-points">
-                  <li>Google Cybersecurity Certificate (2025)</li>
-                  <li>Java HackerRank Certificate (2024)</li>
-                  <li>CompTIA Security+ in progress</li>
-                </ul>
+          <article class="stack-card">
+            <div class="stack-heading">
+              <span class="stack-index">D</span>
+              <div>
+                <p class="micro-label">Security &amp; systems</p>
+                <h3>Visibility and resilience</h3>
               </div>
-            </article>
+            </div>
+            <div class="skill-cloud">
+              <span>Splunk</span><span>ELK Stack</span><span>Wireshark</span><span>Nmap</span>
+              <span>SQLMap</span><span>MITRE ATT&amp;CK</span><span>AES</span><span>FPGA / RTL</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section education-section reveal" aria-labelledby="education-title">
+        <div class="education-card">
+          <div class="education-monogram" aria-hidden="true">YU</div>
+          <div>
+            <p class="micro-label">Lassonde School of Engineering · York University</p>
+            <h2 id="education-title">Honours BEng, Software Engineering</h2>
+            <p>Cybersecurity Stream · September 2022 — December 2026</p>
           </div>
-        </section>
-
-        <section class="section reveal" id="contact">
-          <div class="section-heading">
-            <p class="eyebrow">Resume Tracks</p>
-            <h2>Choose the version that fits the role.</h2>
-            <p>
-              I keep separate resume versions for software, cybersecurity, and hardware-focused
-              opportunities. They are all bundled here for quick recruiter access.
-            </p>
+          <div class="education-meta">
+            <span>Final year</span>
+            <span>Ontario, Canada</span>
           </div>
+        </div>
+      </section>
 
-          <div class="resume-grid">
-            <a class="resume-card" href="assets/resume/Neel_Upadhyay_SResume.pdf" download>
-              <p class="panel-tag">Software Resume</p>
-              <h3>Backend, cloud, APIs, and full-stack systems</h3>
-              <span>Download PDF</span>
-            </a>
-
-            <a class="resume-card" href="assets/resume/Neel_Upadhyay_CResume.pdf" download>
-              <p class="panel-tag">Cybersecurity Resume</p>
-              <h3>Applied cryptography, protocol design, and secure systems</h3>
-              <span>Download PDF</span>
-            </a>
-
-            <a class="resume-card" href="assets/resume/Neel_Upadhyay_HResume.pdf" download>
-              <p class="panel-tag">Hardware Resume</p>
-              <h3>FPGA, Verilog, RTL design, and hardware-software integration</h3>
-              <span>Download PDF</span>
-            </a>
+      <section class="section resume-section" aria-labelledby="resume-title">
+        <div class="section-kicker reveal">
+          <span>05</span>
+          <p>Résumé tracks</p>
+        </div>
+        <div class="section-intro section-intro-split reveal">
+          <div>
+            <p class="eyebrow">Role-specific detail</p>
+            <h2 id="resume-title">Choose the version closest to your role.</h2>
           </div>
+          <p>
+            Each version emphasizes the same engineering foundation through a different hiring lens.
+          </p>
+        </div>
 
-          <div class="contact-panel">
+        <div class="resume-grid reveal">
+          <a class="resume-card resume-card-featured" href="assets/resume/Neel_Upadhyay_SResume.pdf" download>
+            <span class="resume-index">01</span>
             <div>
-              <p class="panel-tag">Get In Touch</p>
-              <h2>Want to talk software, security, or systems?</h2>
-              <p>
-                The fastest way to reach me is by email. I am also active on GitHub and LinkedIn.
-              </p>
+              <p class="micro-label">Software engineering</p>
+              <h3>Backend, cloud &amp; full-stack systems</h3>
             </div>
+            <span class="resume-action">PDF ↓</span>
+          </a>
 
-            <div class="contact-details">
-              <a class="contact-email" href="mailto:neelmu12@gmail.com">neelmu12@gmail.com</a>
-              <div class="contact-links">
-                <a href="https://github.com/neelmu12-code" target="_blank" rel="noreferrer">
-                  GitHub
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/neel-upadhyay-a458b3264/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  LinkedIn
-                </a>
-              </div>
+          <a class="resume-card" href="assets/resume/Neel_Upadhyay_SC_Resume.pdf" download>
+            <span class="resume-index">02</span>
+            <div>
+              <p class="micro-label">Security engineering</p>
+              <h3>PKI, cryptography &amp; secure systems</h3>
             </div>
+            <span class="resume-action">PDF ↓</span>
+          </a>
+
+          <a class="resume-card" href="assets/resume/Neel_Upadhyay_COResume.pdf" download>
+            <span class="resume-index">03</span>
+            <div>
+              <p class="micro-label">Cybersecurity operations</p>
+              <h3>Offensive testing &amp; security operations</h3>
+            </div>
+            <span class="resume-action">PDF ↓</span>
+          </a>
+
+          <a class="resume-card" href="assets/resume/Neel_Upadhyay_CDResume.pdf" download>
+            <span class="resume-index">04</span>
+            <div>
+              <p class="micro-label">Cyber defense</p>
+              <h3>Detection, threat analysis &amp; risk</h3>
+            </div>
+            <span class="resume-action">PDF ↓</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-glow" aria-hidden="true"></div>
+        <div class="contact-inner reveal">
+          <p class="eyebrow">Let’s build something dependable</p>
+          <h2 id="contact-title">Looking for a backend, cloud, or security-minded engineer?</h2>
+          <p>
+            I’m completing my Software Engineering degree in December 2026 and am open to full-time
+            opportunities beginning January 2027.
+          </p>
+          <a class="contact-email" href="mailto:neelmu12@gmail.com">
+            neelmu12@gmail.com <span aria-hidden="true">↗</span>
+          </a>
+          <div class="contact-socials">
+            <a href="https://github.com/neelmu12-code" target="_blank" rel="noreferrer">GitHub</a>
+            <a
+              href="https://www.linkedin.com/in/neel-upadhyay-a458b3264/"
+              target="_blank"
+              rel="noreferrer"
+            >LinkedIn</a>
+            <a href="assets/resume/Neel_Upadhyay_SResume.pdf" download>Résumé</a>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+    </main>
 
-      <footer class="site-footer">
-        <p>Neel Upadhyay</p>
-        <a href="mailto:neelmu12@gmail.com">neelmu12@gmail.com</a>
-        <p>&copy; <span id="year"></span></p>
-      </footer>
-    </div>
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark" aria-hidden="true">NU</span>
+        <span class="brand-copy"><strong>Neel Upadhyay</strong><span>Built with intention.</span></span>
+      </a>
+      <p>© <span id="year"></span> · Ontario, Canada</p>
+      <a class="back-to-top" href="#top">Back to top ↑</a>
+    </footer>
 
     <script src="script.js"></script>
   </body>
