@@ -34,16 +34,11 @@ npm.cmd test
 ├── assets/
 │   ├── images/          # Portrait, project proof, and generated brand artwork
 │   └── resume/          # Role-specific PDF résumés
-├── github-profile/      # Deploy-ready neelmu12-code profile README package
 ├── index.html           # Portfolio content and metadata
 ├── styles.css           # Responsive visual system
 ├── script.js            # Navigation, reveal, and section state
 └── server.js            # Small local static server
 ```
-
-## GitHub profile package
-
-The [GitHub profile README](github-profile/README.md) and its local assets are ready to publish in a public repository named `neelmu12-code/neelmu12-code`.
 
 ## Live site
 

@@ -49,13 +49,13 @@ I build backend, cloud-connected, and security-aware systems with a focus on rel
 
 ## Featured projects
 
-### Real-Time ANPR & Parking Lot Monitoring System
+### [Real-Time ANPR & Parking Lot Monitoring System](https://github.com/neelmu12-code/parking-management-system)
 
 Edge-to-cloud parking security platform using Jetson-based inference, GPS-enriched detections, a Python REST API, AWS infrastructure, SQL storage, and live dashboard updates.
 
 `Python` | `AWS EC2` | `WebSockets` | `React` | `SQL` | `Jetson Nano`
 
-### Omni-Nexus Auctions
+### [Omni-Nexus Auctions](https://github.com/neelmu12-code/Auction-e-Commerce-System)
 
 Backend-driven auction marketplace organized across six Spring Boot services for users, catalogue, auctions, payments, AI assistance, and gateway routing, with isolated MySQL schemas and JWT-protected access.
 
@@ -67,13 +67,13 @@ Signal-inspired secure messaging implementation combining a Diffie-Hellman ratch
 
 `Python` | `Diffie-Hellman` | `KDF Chains` | `AES`
 
-### AES-128 Hardware Encryption
+### [AES-128 Hardware Encryption](https://github.com/neelmu12-code/AES-128-FPGA-Encryption-system)
 
 AES-128 encryption and decryption implemented at the register-transfer level in Verilog, including cipher transformations, key expansion, RAM, and finite-state control on DE10-Lite hardware.
 
 `Verilog` | `FPGA` | `RTL Design` | `DE10-Lite`
 
-> Project repositories are currently private. Code walkthroughs are available on request.
+Selected project repositories are linked above. Additional code walkthroughs are available on request.
 
 ## Experience
 
