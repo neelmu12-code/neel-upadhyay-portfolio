@@ -17,16 +17,12 @@
 
 ## About me
 
-<img src="./assets/neel-upadhyay-portrait.jpg" alt="Neel Upadhyay" width="150" align="right" />
-
 I build backend, cloud-connected, and security-aware systems with a focus on reliable data flows and practical engineering. My work spans Spring Boot services, Python automation, AWS deployment, real-time edge-to-cloud pipelines, applied cryptography, and FPGA design.
 
 - Based in Ontario, Canada
 - Expected graduation: December 2026
 - Available for full-time roles beginning January 2027
 - Interested in backend engineering, cloud platforms, cybersecurity, and real-time systems
-
-<br clear="right" />
 
 ## Certifications
 
