@@ -7,7 +7,7 @@ A responsive, dependency-free portfolio for Neel Upadhyay, a final-year Software
 ## Highlights
 
 - Project-led case studies spanning Spring Boot microservices, edge-to-cloud ANPR, applied cryptography, SIEM detection, and FPGA security
-- Current CompTIA Security+ and AWS Certified Cloud Practitioner credentials
+- Current Blue Team Level 1, CompTIA Security+, and AWS Certified Cloud Practitioner credentials
 - Grouped language, framework, cloud, data, and security stack
 - Four role-specific résumé downloads
 - Responsive navigation, reduced-motion support, keyboard focus states, semantic metadata, and structured data

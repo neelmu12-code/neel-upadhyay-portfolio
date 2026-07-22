@@ -28,6 +28,7 @@ I build backend, cloud-connected, and security-aware systems with a focus on rel
 
 | Credential | Issuer | Earned |
 | --- | --- | :---: |
+| Blue Team Level 1 (BTL1) | Security Blue Team | 2026 |
 | CompTIA Security+ | CompTIA | 2026 |
 | AWS Certified Cloud Practitioner | Amazon Web Services | 2026 |
 | Google Cybersecurity Certificate | Google | 2025 |
