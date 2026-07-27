@@ -963,7 +963,7 @@ main {
 
 .project-image-anpr {
   display: grid;
-  grid-template-rows: auto clamp(260px, 20vw, 340px);
+  grid-template-rows: auto clamp(148px, 10vw, 176px);
   gap: 1px;
   align-self: start;
   min-height: 0;
@@ -1018,26 +1018,277 @@ main {
   display: grid;
   place-items: center;
   background:
-    radial-gradient(circle at 50% 42%, rgba(92, 225, 230, 0.12), transparent 42%),
+    radial-gradient(circle at 18% 50%, rgba(92, 225, 230, 0.12), transparent 32%),
     #040b14;
 }
 
-.anpr-media-demo video {
+.anpr-video-launch {
+  position: relative;
+  display: grid;
+  grid-template-columns: clamp(92px, 8vw, 126px) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(18px, 2vw, 30px);
+  width: 100%;
+  height: 100%;
+  padding-right: clamp(22px, 2.4vw, 36px);
+  overflow: hidden;
+  background:
+    linear-gradient(100deg, rgba(92, 225, 230, 0.08), transparent 48%),
+    #07131f;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.anpr-video-launch::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  content: "";
+  pointer-events: none;
+  transition: border-color 180ms ease;
+}
+
+.anpr-video-thumb {
+  position: relative;
+  align-self: stretch;
+  min-width: 0;
+  overflow: hidden;
+  border-right: 1px solid var(--line);
+  background: #03080e;
+}
+
+.anpr-video-thumb::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 62%, rgba(4, 11, 18, 0.38)),
+    linear-gradient(0deg, rgba(4, 11, 18, 0.24), transparent 48%);
+  content: "";
+  pointer-events: none;
+}
+
+.anpr-video-thumb img {
   display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 48%;
+  transition: transform 360ms cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.anpr-video-copy {
+  display: grid;
+  min-width: 0;
+  gap: 5px;
+}
+
+.anpr-video-copy .micro-label {
+  margin: 0;
+  color: var(--cyan);
+}
+
+.anpr-video-copy strong {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.3vw, 1.28rem);
+  letter-spacing: -0.025em;
+}
+
+.anpr-video-copy > span:last-child {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.anpr-video-play {
+  display: grid;
+  width: clamp(46px, 4vw, 58px);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(92, 225, 230, 0.36);
+  border-radius: 50%;
+  background: rgba(92, 225, 230, 0.1);
+  box-shadow: 0 0 0 8px rgba(92, 225, 230, 0.035);
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.anpr-video-play > span {
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid var(--cyan);
+}
+
+.anpr-video-launch:hover::after,
+.anpr-video-launch:focus-visible::after {
+  border-color: rgba(92, 225, 230, 0.36);
+}
+
+.anpr-video-launch:hover .anpr-video-thumb img {
+  transform: scale(1.055);
+}
+
+.anpr-video-launch:hover .anpr-video-play,
+.anpr-video-launch:focus-visible .anpr-video-play {
+  border-color: rgba(92, 225, 230, 0.72);
+  background: rgba(92, 225, 230, 0.18);
+  transform: scale(1.06);
+}
+
+.anpr-video-launch:focus-visible {
+  z-index: 2;
+  outline: 2px solid var(--cyan);
+  outline-offset: -4px;
+}
+
+.anpr-video-inline {
+  display: none;
   width: 100%;
   height: 100%;
   object-fit: contain;
   background: #040b14;
 }
 
-.anpr-media-demo .image-label {
-  top: 18px;
-  bottom: auto;
+html.video-modal-open,
+html.video-modal-open body {
+  overflow: hidden;
+}
+
+.video-dialog {
+  width: min(calc(100vw - 32px), 960px);
+  height: min(calc(100vh - 32px), 900px);
+  height: min(calc(100dvh - 32px), 900px);
+  max-width: none;
+  max-height: none;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(139, 172, 199, 0.25);
+  border-radius: 26px;
+  background: #040b14;
+  color: var(--text);
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.72);
+}
+
+.video-dialog[open] {
+  animation: video-dialog-enter 220ms cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.video-dialog::backdrop {
+  background: rgba(1, 6, 11, 0.84);
+  backdrop-filter: blur(14px);
+}
+
+.video-dialog-shell {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  height: 100%;
+}
+
+.video-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 20px 17px 24px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(8, 20, 32, 0.96);
+}
+
+.video-dialog-header .micro-label {
+  margin: 0 0 3px;
+  color: var(--cyan);
+}
+
+.video-dialog-header h2 {
+  margin: 0;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  letter-spacing: -0.035em;
+}
+
+.video-dialog-close {
+  display: grid;
+  flex: 0 0 auto;
+  width: 44px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.video-dialog-close span {
+  font-size: 1.65rem;
+  font-weight: 300;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+.video-dialog-close:hover,
+.video-dialog-close:focus-visible {
+  border-color: rgba(92, 225, 230, 0.64);
+  background: rgba(92, 225, 230, 0.12);
+  transform: rotate(4deg);
+}
+
+.video-dialog-close:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+.video-dialog-stage {
+  display: grid;
+  min-height: 0;
+  place-items: center;
+  padding: clamp(12px, 2vw, 24px);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(92, 225, 230, 0.11), transparent 42%),
+    #02070c;
+}
+
+.video-dialog-stage video {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  background: #000;
+  object-fit: contain;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.52);
+}
+
+@keyframes video-dialog-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .project:hover .project-image img {
   filter: saturate(1.08) contrast(1.03);
   transform: scale(1.035);
+}
+
+.project:hover .anpr-video-launch:hover .anpr-video-thumb img {
+  transform: scale(1.055);
 }
 
 .project:hover .anpr-media-showcase img {
@@ -2882,11 +3133,33 @@ a.resume-card:hover {
 @media (max-width: 980px) {
   .project-image-anpr {
     grid-template-columns: 1fr;
-    grid-template-rows: auto clamp(360px, 68vh, 520px);
+    grid-template-rows: auto clamp(150px, 24vw, 190px);
   }
 
   .anpr-media-showcase {
     aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 720px) {
+  .project-image-anpr {
+    grid-template-rows: auto clamp(380px, 70vh, 520px);
+  }
+
+  .anpr-video-launch {
+    display: none;
+  }
+
+  .anpr-video-inline {
+    display: block;
+  }
+
+  .video-dialog {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    border: 0;
+    border-radius: 0;
   }
 }
 

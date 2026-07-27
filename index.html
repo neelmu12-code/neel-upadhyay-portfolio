@@ -60,7 +60,7 @@
       fetchpriority="high"
     />
     <script>document.documentElement.classList.add("js");</script>
-    <link rel="stylesheet" href="styles.css?v=20260727-3" />
+    <link rel="stylesheet" href="styles.css?v=20260727-4" />
 
     <script type="application/ld+json">
       {
@@ -697,22 +697,49 @@
               </figure>
 
               <figure class="anpr-media anpr-media-demo">
+                <a
+                  class="anpr-video-launch"
+                  href="assets/video/anpr-live-demo.mp4"
+                  aria-haspopup="dialog"
+                  aria-controls="anpr-video-dialog"
+                  aria-describedby="anpr-demo-caption"
+                  data-video-open
+                >
+                  <span class="anpr-video-thumb" aria-hidden="true">
+                    <img
+                      src="assets/images/anpr-capstone-prototype.jpeg"
+                      alt=""
+                      width="900"
+                      height="1600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </span>
+                  <span class="anpr-video-copy">
+                    <span class="micro-label">6-second prototype demo</span>
+                    <strong>Watch UrbanSight in motion</strong>
+                    <span>Click to play full-size</span>
+                  </span>
+                  <span class="anpr-video-play" aria-hidden="true">
+                    <span></span>
+                  </span>
+                </a>
                 <video
+                  class="anpr-video-inline"
                   controls
                   muted
                   playsinline
-                  preload="metadata"
+                  preload="none"
                   poster="assets/images/anpr-capstone-prototype.jpeg"
                   width="464"
                   height="832"
                   aria-label="Six-second UrbanSight ANPR capstone prototype demo"
-                  aria-describedby="anpr-demo-caption"
                 >
                   <source src="assets/video/anpr-live-demo.mp4" type="video/mp4" />
                   <a href="assets/video/anpr-live-demo.mp4">Open the UrbanSight prototype demo</a>
                 </video>
-                <figcaption class="image-label" id="anpr-demo-caption">
-                  <span aria-hidden="true"></span> 6-second prototype demo
+                <figcaption class="sr-only" id="anpr-demo-caption">
+                  Opens a focused player for the six-second UrbanSight ANPR prototype video.
                 </figcaption>
               </figure>
             </div>
@@ -1221,6 +1248,46 @@
       <a class="back-to-top" href="#top">Back to top ↑</a>
     </footer>
 
-    <script src="script.js"></script>
+    <dialog
+      class="video-dialog"
+      id="anpr-video-dialog"
+      aria-labelledby="anpr-video-title"
+      data-video-dialog
+    >
+      <div class="video-dialog-shell">
+        <header class="video-dialog-header">
+          <div>
+            <p class="micro-label">UrbanSight · Prototype proof</p>
+            <h2 id="anpr-video-title">Live ANPR demo</h2>
+          </div>
+          <button
+            class="video-dialog-close"
+            type="button"
+            aria-label="Close UrbanSight prototype video"
+            data-video-close
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+        </header>
+        <div class="video-dialog-stage">
+          <video
+            controls
+            muted
+            playsinline
+            preload="none"
+            poster="assets/images/anpr-capstone-prototype.jpeg"
+            width="464"
+            height="832"
+            aria-labelledby="anpr-video-title"
+            data-video-player
+          >
+            <source src="assets/video/anpr-live-demo.mp4" type="video/mp4" />
+            <a href="assets/video/anpr-live-demo.mp4">Open the UrbanSight prototype demo</a>
+          </video>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="script.js?v=20260727-4"></script>
   </body>
 </html>

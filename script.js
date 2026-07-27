@@ -4,6 +4,12 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const navLinks = Array.from(document.querySelectorAll(".site-nav a[href^='#']"));
 const revealElements = document.querySelectorAll(".reveal");
 const yearNode = document.getElementById("year");
+const videoTrigger = document.querySelector("[data-video-open]");
+const videoDialog = document.querySelector("[data-video-dialog]");
+const videoClose = document.querySelector("[data-video-close]");
+const videoPlayer = document.querySelector("[data-video-player]");
+const inlineVideoPlayer = document.querySelector(".anpr-video-inline");
+let videoOpener = null;
 
 if (yearNode) {
   yearNode.textContent = String(new Date().getFullYear());
@@ -55,6 +61,72 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 980) {
     closeNavigation();
   }
+
+  if (window.innerWidth > 720) {
+    inlineVideoPlayer?.pause();
+  } else if (videoDialog?.open) {
+    closeVideoDialog();
+  }
+});
+
+const closeVideoDialog = () => {
+  if (videoDialog?.open) {
+    videoDialog.close();
+  }
+};
+
+videoTrigger?.addEventListener("click", (event) => {
+  if (typeof videoDialog?.showModal !== "function") {
+    return;
+  }
+
+  event.preventDefault();
+  videoOpener = document.activeElement;
+  closeNavigation();
+  videoDialog.showModal();
+  document.documentElement.classList.add("video-modal-open");
+
+  try {
+    videoPlayer.currentTime = 0;
+  } catch {
+    // The media timeline may not be ready until playback begins.
+  }
+
+  videoPlayer?.play()?.catch(() => {
+    // Controls remain available when browser autoplay policy blocks playback.
+  });
+  videoClose?.focus({ preventScroll: true });
+});
+
+videoClose?.addEventListener("click", closeVideoDialog);
+
+videoDialog?.addEventListener("cancel", (event) => {
+  event.preventDefault();
+  closeVideoDialog();
+});
+
+videoDialog?.addEventListener("click", (event) => {
+  if (event.target === videoDialog) {
+    closeVideoDialog();
+  }
+});
+
+videoDialog?.addEventListener("close", () => {
+  videoPlayer?.pause();
+
+  try {
+    videoPlayer.currentTime = 0;
+  } catch {
+    // Nothing to reset before the media timeline is ready.
+  }
+
+  document.documentElement.classList.remove("video-modal-open");
+
+  if (videoOpener?.isConnected) {
+    videoOpener.focus({ preventScroll: true });
+  }
+
+  videoOpener = null;
 });
 
 if ("IntersectionObserver" in window) {
