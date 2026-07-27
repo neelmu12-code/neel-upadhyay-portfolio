@@ -31,7 +31,7 @@ Ontario, Canada
 **Website**
 
 ```text
-https://neelmu12-code.github.io/neel-upadhyay-portfolio/
+https://neelupadhyay.ca/
 ```
 
 **Social link**

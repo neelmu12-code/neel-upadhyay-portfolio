@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://neelmu12-code.github.io/neel-upadhyay-portfolio/"><img src="https://img.shields.io/badge/Portfolio-08111c?style=for-the-badge&logo=googlechrome&logoColor=39c7bd" alt="Portfolio" /></a>
+  <a href="https://neelupadhyay.ca/"><img src="https://img.shields.io/badge/Portfolio-08111c?style=for-the-badge&logo=googlechrome&logoColor=39c7bd" alt="Portfolio" /></a>
   <a href="https://www.linkedin.com/in/neel-upadhyay-a458b3264/"><img src="https://img.shields.io/badge/LinkedIn-08111c?style=for-the-badge&logo=linkedin&logoColor=39c7bd" alt="LinkedIn" /></a>
   <a href="mailto:neelmu12@gmail.com"><img src="https://img.shields.io/badge/Email-08111c?style=for-the-badge&logo=gmail&logoColor=ff7b35" alt="Email Neel Upadhyay" /></a>
 </p>
@@ -39,22 +39,37 @@ I build backend, cloud-connected, and security-aware systems with a focus on rel
 | Area | Technologies |
 | --- | --- |
 | **Languages** | Java, Python, C/C++, SQL, JavaScript, TypeScript, Verilog, Bash |
-| **Backend & frameworks** | Spring Boot, React, JDBC, REST APIs, WebSockets, JWT, Microservices |
-| **Cloud & developer tools** | AWS EC2, AWS S3, Docker Compose, Linux, Git, Postman, WSL |
-| **Frontend & data** | HTML/CSS, MySQL, SQL schema design, query optimization |
+| **Backend & frameworks** | Spring Boot, FastAPI, Next.js, React, REST APIs, WebSockets, OAuth, Microservices |
+| **Cloud, data & delivery** | AWS EC2, S3, Rekognition, PostgreSQL, Redis, MySQL, Docker Compose, Alembic |
 | **Security & systems** | Splunk, ELK, Wireshark, Nmap, SQLMap, MITRE ATT&CK, AES-128, Double Ratchet, FPGA/RTL |
 
 ## Featured projects
 
-### [Real-Time ANPR & Parking Lot Monitoring System](https://github.com/neelmu12-code/parking-management-system)
+### [Deximon — Pokémon TCG Collector Platform](https://github.com/neelmu12-code/Deximon)
+
+Active-development, six-person collector platform with secure accounts, digital binders, OCR-assisted card matching, marketplace listings, listing-based chat, notifications, and seller reviews.
+
+[Live product](https://deximon.ca/) · [Source code](https://github.com/neelmu12-code/Deximon)
+
+The AWS EC2 demo environment is started on demand to control operating costs.
+
+**My contributions:** Authentication and profile flows, OAuth and password reset, the FastAPI scanner and card-matching fallbacks, Docker deployment preparation, the S3/Rekognition integration path, and real-time chat reliability.
+
+`Next.js` | `FastAPI` | `PostgreSQL` | `Redis` | `Docker` | `AWS` | `OCR`
+
+### [UrbanSight — Real-Time ANPR & Parking Lot Monitoring System](https://github.com/neelmu12-code/parking-management-system)
 
 Edge-to-cloud parking security platform using Jetson-based inference, GPS-enriched detections, a Python REST API, AWS infrastructure, SQL storage, and live dashboard updates.
+
+**My contribution:** Cross-network backend connectivity and operator controls linking the monitoring interface to the live parking system.
 
 `Python` | `AWS EC2` | `WebSockets` | `React` | `SQL` | `Jetson Nano`
 
 ### [Omni-Nexus Auctions](https://github.com/neelmu12-code/Auction-e-Commerce-System)
 
 Backend-driven auction marketplace organized across six Spring Boot services for users, catalogue, auctions, payments, AI assistance, and gateway routing, with isolated MySQL schemas and JWT-protected access.
+
+**My contribution:** API-gateway and user-security work covering TLS, token/session handling, authentication flows, integration, and Docker fixes.
 
 `Java` | `Spring Boot` | `MySQL` | `JWT` | `Docker Compose` | `React`
 
@@ -94,6 +109,6 @@ September 2022-December 2026
 
 ## Let's connect
 
-I am open to full-time software engineering, backend, cloud, and cybersecurity opportunities beginning January 2027. Recruiters and engineering teams can reach me through [email](mailto:neelmu12@gmail.com) or [LinkedIn](https://www.linkedin.com/in/neel-upadhyay-a458b3264/), and see more of my work on my [portfolio](https://neelmu12-code.github.io/neel-upadhyay-portfolio/).
+I am open to full-time software engineering, backend, cloud, and cybersecurity opportunities beginning January 2027. Recruiters and engineering teams can reach me through [email](mailto:neelmu12@gmail.com) or [LinkedIn](https://www.linkedin.com/in/neel-upadhyay-a458b3264/), and see more of my work on my [portfolio](https://neelupadhyay.ca/).
 
 <p align="center"><sub>Building reliable systems with security considered from the start.</sub></p>

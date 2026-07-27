@@ -16,25 +16,38 @@ const syncHeaderState = () => {
 syncHeaderState();
 window.addEventListener("scroll", syncHeaderState, { passive: true });
 
-const closeNavigation = () => {
+const isNavigationOpen = () => navToggle?.getAttribute("aria-expanded") === "true";
+
+const closeNavigation = ({ returnFocus = false } = {}) => {
+  const wasOpen = isNavigationOpen();
   nav?.classList.remove("is-open");
   navToggle?.setAttribute("aria-expanded", "false");
   document.documentElement.classList.remove("nav-open");
+
+  if (returnFocus && wasOpen) {
+    navToggle?.focus();
+  }
 };
 
 navToggle?.addEventListener("click", () => {
-  const willOpen = navToggle.getAttribute("aria-expanded") !== "true";
+  const willOpen = !isNavigationOpen();
+
+  if (!willOpen) {
+    closeNavigation();
+    return;
+  }
+
   navToggle.setAttribute("aria-expanded", String(willOpen));
   nav?.classList.toggle("is-open", willOpen);
   document.documentElement.classList.toggle("nav-open", willOpen);
+  window.requestAnimationFrame(() => navLinks[0]?.focus());
 });
 
 navLinks.forEach((link) => link.addEventListener("click", closeNavigation));
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    closeNavigation();
-    navToggle?.focus();
+  if (event.key === "Escape" && isNavigationOpen()) {
+    closeNavigation({ returnFocus: true });
   }
 });
 

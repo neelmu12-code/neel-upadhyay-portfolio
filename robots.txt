@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://neelmu12-code.github.io/neel-upadhyay-portfolio/sitemap.xml
+Sitemap: https://neelupadhyay.ca/sitemap.xml
