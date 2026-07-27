@@ -6,6 +6,7 @@ const path = require("path");
 const ROOT = __dirname;
 const CUSTOM_HOST = "neelupadhyay.ca";
 const CUSTOM_ORIGIN = `https://${CUSTOM_HOST}`;
+const LAST_SIGNIFICANT_UPDATE = "2026-07-27";
 const LEGACY_PAGES_DOMAIN =
   "neelmu12-code.github.io" + "/neel-upadhyay-portfolio";
 const EXPECTED_RESUMES = [
@@ -417,6 +418,29 @@ function validateProductionMetadata(indexDocument) {
     fail(`index.html: og:image must use the ${CUSTOM_HOST} origin`);
   }
 
+  const robotsMeta = findTag(
+    indexDocument.tags,
+    "meta",
+    (attributes) => (attributes.name || "").toLowerCase() === "robots"
+  );
+  const robotsTokens = new Set(
+    (robotsMeta?.attributes.content || "")
+      .toLowerCase()
+      .split(/[\s,]+/)
+      .filter(Boolean)
+  );
+  for (const directive of [
+    "index",
+    "follow",
+    "max-image-preview:large",
+    "max-snippet:-1",
+    "max-video-preview:-1",
+  ]) {
+    if (!robotsTokens.has(directive)) {
+      fail(`index.html: robots metadata must include "${directive}"`);
+    }
+  }
+
   if (indexDocument.jsonLdValues.length === 0) {
     fail("index.html: at least one application/ld+json block is required");
     return;
@@ -435,22 +459,95 @@ function validateProductionMetadata(indexDocument) {
   };
   indexDocument.jsonLdValues.forEach(addJsonLdNodes);
 
+  const findJsonLdType = (expectedType) =>
+    jsonLdNodes.find((node) => {
+      const type = node["@type"];
+      return (
+        type === expectedType ||
+        (Array.isArray(type) && type.includes(expectedType))
+      );
+    });
+
+  const website = findJsonLdType("WebSite");
+  const profilePage = findJsonLdType("ProfilePage");
+  const profileImage = findJsonLdType("ImageObject");
   const person = jsonLdNodes.find((node) => {
     const type = node["@type"];
     return type === "Person" || (Array.isArray(type) && type.includes("Person"));
   });
 
+  if (!website) {
+    fail("index.html: JSON-LD must include a WebSite node");
+  } else {
+    if (website["@id"] !== `${CUSTOM_ORIGIN}/#website`) {
+      fail(`index.html: JSON-LD WebSite @id must use the ${CUSTOM_HOST} origin`);
+    }
+    if (website.url !== `${CUSTOM_ORIGIN}/`) {
+      fail(`index.html: JSON-LD WebSite url must be "${CUSTOM_ORIGIN}/"`);
+    }
+  }
+
+  if (!profilePage) {
+    fail("index.html: JSON-LD must include a ProfilePage node");
+  } else {
+    if (profilePage.url !== `${CUSTOM_ORIGIN}/`) {
+      fail(`index.html: JSON-LD ProfilePage url must be "${CUSTOM_ORIGIN}/"`);
+    }
+    if (profilePage.mainEntity?.["@id"] !== `${CUSTOM_ORIGIN}/#person`) {
+      fail("index.html: JSON-LD ProfilePage mainEntity must reference the Person node");
+    }
+    if (profilePage.dateModified !== LAST_SIGNIFICANT_UPDATE) {
+      fail(
+        `index.html: JSON-LD ProfilePage dateModified must be "${LAST_SIGNIFICANT_UPDATE}"`
+      );
+    }
+  }
+
   if (!person) {
     fail("index.html: JSON-LD must include a Person node");
   } else {
+    if (person["@id"] !== `${CUSTOM_ORIGIN}/#person`) {
+      fail(`index.html: JSON-LD Person @id must use the ${CUSTOM_HOST} origin`);
+    }
     if (person.url !== `${CUSTOM_ORIGIN}/`) {
       fail(`index.html: JSON-LD Person url must be "${CUSTOM_ORIGIN}/"`);
     }
-    if (
-      typeof person.image !== "string" ||
-      !person.image.startsWith(`${CUSTOM_ORIGIN}/`)
-    ) {
-      fail(`index.html: JSON-LD Person image must use the ${CUSTOM_HOST} origin`);
+    const imageIsLocalUrl =
+      typeof person.image === "string" &&
+      person.image.startsWith(`${CUSTOM_ORIGIN}/`);
+    const imageReferencesProfile =
+      person.image?.["@id"] === `${CUSTOM_ORIGIN}/#profile-image`;
+    if (!imageIsLocalUrl && !imageReferencesProfile) {
+      fail(
+        `index.html: JSON-LD Person image must use or reference the ${CUSTOM_HOST} origin`
+      );
+    }
+  }
+
+  if (
+    !profileImage ||
+    profileImage["@id"] !== `${CUSTOM_ORIGIN}/#profile-image` ||
+    typeof profileImage.contentUrl !== "string" ||
+    !profileImage.contentUrl.startsWith(`${CUSTOM_ORIGIN}/`)
+  ) {
+    fail("index.html: JSON-LD must include the local profile ImageObject");
+  }
+
+  const sourceCodeNodes = jsonLdNodes.filter((node) => {
+    const type = node["@type"];
+    return (
+      type === "SoftwareSourceCode" ||
+      (Array.isArray(type) && type.includes("SoftwareSourceCode"))
+    );
+  });
+  if (sourceCodeNodes.length < 3) {
+    fail("index.html: JSON-LD must describe all three featured software projects");
+  }
+  for (const project of sourceCodeNodes) {
+    if (project.contributor?.["@id"] !== `${CUSTOM_ORIGIN}/#person`) {
+      fail(
+        `index.html: JSON-LD project "${project.name || project["@id"]}" must reference Neel as contributor`
+      );
     }
   }
 }
@@ -505,6 +602,29 @@ function validateHostingFiles() {
       if (!location.startsWith(`${CUSTOM_ORIGIN}/`)) {
         fail(
           `sitemap.xml: "${location}" must use the ${CUSTOM_HOST} origin`
+        );
+      }
+    }
+
+    const lastModifiedValues = [
+      ...sitemap.matchAll(/<lastmod>\s*([^<]+?)\s*<\/lastmod>/gi),
+    ].map((match) => match[1]);
+    if (!lastModifiedValues.includes(LAST_SIGNIFICANT_UPDATE)) {
+      fail(
+        `sitemap.xml: must include <lastmod>${LAST_SIGNIFICANT_UPDATE}</lastmod>`
+      );
+    }
+
+    const imageLocations = [
+      ...sitemap.matchAll(/<image:loc>\s*([^<]+?)\s*<\/image:loc>/gi),
+    ].map((match) => match[1]);
+    if (imageLocations.length === 0) {
+      fail("sitemap.xml: at least one <image:loc> URL is required");
+    }
+    for (const imageLocation of imageLocations) {
+      if (!imageLocation.startsWith(`${CUSTOM_ORIGIN}/assets/images/`)) {
+        fail(
+          `sitemap.xml: image "${imageLocation}" must use the ${CUSTOM_HOST} image origin`
         );
       }
     }

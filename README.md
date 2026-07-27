@@ -10,7 +10,7 @@ A responsive, dependency-free portfolio for Neel Upadhyay, a final-year Software
 - Current Blue Team Level 1, CompTIA Security+, and AWS Certified Cloud Practitioner credentials
 - Grouped language, framework, cloud, data, and security stack
 - Two primary résumé choices for Software Engineering and Cybersecurity, plus four specialized versions
-- Responsive navigation, reduced-motion support, keyboard focus states, semantic metadata, and structured data
+- Responsive navigation, reduced-motion support, keyboard focus states, semantic metadata, and connected profile/project structured data
 - No production framework or runtime dependency
 
 ## Run locally
@@ -46,3 +46,6 @@ npm.cmd test
 ## Live site
 
 [neelupadhyay.ca](https://neelupadhyay.ca/)
+
+After a significant release, follow the [search setup checklist](SEO_SETUP.md)
+to submit the sitemap and request indexing.
