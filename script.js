@@ -58,6 +58,12 @@ document.addEventListener("click", (event) => {
   }
 });
 
+document.addEventListener("focusin", (event) => {
+  if (isNavOpen() && !header?.contains(event.target)) {
+    closeNav();
+  }
+});
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && isNavOpen()) {
     closeNav({ restoreFocus: true });
@@ -76,13 +82,13 @@ const closeVideoDialog = () => {
   }
 };
 
-videoTrigger?.addEventListener("click", () => {
+videoTrigger?.addEventListener("click", (event) => {
   if (typeof videoDialog?.showModal !== "function") {
-    window.location.href = "assets/video/anpr-live-demo.mp4";
     return;
   }
 
-  videoOpener = document.activeElement;
+  event.preventDefault();
+  videoOpener = event.currentTarget;
   closeNav();
   videoDialog.showModal();
   document.documentElement.classList.add("video-modal-open");

@@ -533,6 +533,7 @@ h4 {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(330px, 0.7fr);
   gap: 0;
+  scroll-margin-top: 108px;
   overflow: hidden;
   margin-bottom: 36px;
   border: 1px solid var(--line);
@@ -614,6 +615,7 @@ h4 {
   font-size: 0.61rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  pointer-events: none;
 }
 
 .media-caption strong {
@@ -837,13 +839,15 @@ h4 {
 .video-dialog-stage {
   display: grid;
   min-height: 0;
+  overflow: hidden;
   place-items: center;
   background: #02060b;
 }
 
 .video-dialog-stage video {
   width: 100%;
-  height: min(74dvh, 760px);
+  height: min(74dvh, 760px, calc(100dvh - 126px));
+  max-height: 100%;
   object-fit: contain;
 }
 
@@ -1093,6 +1097,10 @@ html.video-modal-open body {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+#resume-title {
+  scroll-margin-top: 108px;
 }
 
 .stack-list {
@@ -1387,7 +1395,10 @@ html.video-modal-open body {
     right: 0;
     left: 0;
     display: grid;
+    max-height: calc(100dvh - 82px);
     padding: 10px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
     border: 1px solid var(--line);
     border-radius: 16px;
     background: rgba(244, 243, 239, 0.98);
@@ -1773,5 +1784,10 @@ html.video-modal-open body {
   .js .reveal {
     opacity: 1;
     transform: none;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
   }
 }

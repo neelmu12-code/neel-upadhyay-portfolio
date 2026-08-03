@@ -251,6 +251,18 @@ function collectHtmlDocument(filePath) {
         fail(`${relative(filePath)}:${line}: <video> needs an accessible name`);
       }
     }
+
+    if (tagName === "button" && !Object.hasOwn(attributes, "type")) {
+      fail(`${relative(filePath)}:${line}: <button> needs an explicit type`);
+    }
+
+    if (Object.hasOwn(attributes, "data-video-open")) {
+      if (tagName !== "a" || !attributes.href) {
+        fail(
+          `${relative(filePath)}:${line}: video trigger needs a direct-link fallback`
+        );
+      }
+    }
   }
 
   for (const [id, locations] of ids) {
@@ -658,6 +670,35 @@ function validateResumeReferences(htmlDocuments) {
   }
 }
 
+function validateCrossDocumentFragments(htmlDocuments) {
+  for (const [fromFile, document] of htmlDocuments) {
+    for (const reference of document.references) {
+      const value = reference.value.trim();
+      if (
+        reference.attributeName !== "href" ||
+        value.startsWith("#") ||
+        !value.includes("#") ||
+        isNonLocalReference(value)
+      ) {
+        continue;
+      }
+
+      const fragment = safeDecode(value.slice(value.indexOf("#") + 1), reference.context);
+      if (!fragment) {
+        continue;
+      }
+
+      const targetPath = localPathFromReference(fromFile, value, reference.context);
+      const targetDocument = htmlDocuments.get(targetPath);
+      if (targetDocument && !targetDocument.ids.has(fragment)) {
+        fail(
+          `${reference.context}: target document has no id="${fragment}"`
+        );
+      }
+    }
+  }
+}
+
 const htmlFiles = walkFiles(
   ROOT,
   (filePath) => path.extname(filePath).toLowerCase() === ".html"
@@ -685,6 +726,7 @@ if (!indexDocument) {
 } else {
   validateProductionMetadata(indexDocument);
   validateResumeReferences(htmlDocuments);
+  validateCrossDocumentFragments(htmlDocuments);
 }
 
 validateLegacyDomain();

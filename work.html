@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260803-ux3" />
+    <link rel="stylesheet" href="styles.css?v=20260803-qa1" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
@@ -65,11 +65,11 @@
             <figure class="project-media-primary">
               <img src="assets/images/anpr-capstone-showcase.jpg" alt="UrbanSight capstone banner beside the live license-plate detection monitor and mobile prototype" width="1600" height="1200" loading="lazy" />
             </figure>
-            <button class="project-video-trigger" type="button" aria-haspopup="dialog" aria-controls="urbansight-video-dialog" data-video-open>
+            <a class="project-video-trigger" href="assets/video/anpr-live-demo.mp4" aria-haspopup="dialog" aria-controls="urbansight-video-dialog" data-video-open>
               <span class="video-trigger-thumb" aria-hidden="true"><img src="assets/images/anpr-capstone-prototype.jpeg" alt="" width="900" height="1600" loading="lazy" /></span>
               <span class="demo-play" aria-hidden="true">▶</span>
               <span class="video-trigger-copy"><small>Prototype demo · 6 seconds</small><strong>Watch UrbanSight live</strong></span>
-            </button>
+            </a>
           </div>
           <div class="project-case-copy project-case-copy-wide">
             <div class="project-case-summary">
@@ -124,7 +124,7 @@
       <div class="video-dialog-panel">
         <header class="video-dialog-header">
           <div><p class="label">UrbanSight prototype</p><h2 id="urbansight-video-title">Live ANPR demo</h2></div>
-          <button class="video-dialog-close" type="button" data-video-close><span>Close</span><span class="video-dialog-close-mark" aria-hidden="true">×</span></button>
+          <button class="video-dialog-close" type="button" aria-label="Close UrbanSight video" data-video-close><span>Close</span><span class="video-dialog-close-mark" aria-hidden="true">×</span></button>
         </header>
         <div class="video-dialog-stage">
           <video controls muted playsinline preload="metadata" poster="assets/images/anpr-capstone-prototype.jpeg" width="900" height="1600" aria-label="Six-second UrbanSight ANPR capstone prototype demo" data-video-player>
@@ -139,6 +139,6 @@
       <div class="footer-inner"><div><p class="footer-title">Available January 2027.</p><p class="footer-copy">Open to backend, cloud, and security-focused opportunities.</p></div><nav class="footer-nav" aria-label="Footer"><a href="index.html">Home</a><a href="experience.html">Experience</a><a href="credentials.html">Credentials</a><a href="skills.html">Stack</a><a href="contact.html">Contact</a></nav></div>
       <div class="footer-bottom"><span>© <span data-year></span> Neel Upadhyay</span><span>Ontario, Canada</span></div>
     </footer>
-    <script src="script.js?v=20260803-ux2" defer></script>
+    <script src="script.js?v=20260803-qa1" defer onerror="document.documentElement.classList.remove('js')"></script>
   </body>
 </html>
