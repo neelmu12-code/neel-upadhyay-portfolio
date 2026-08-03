@@ -43,7 +43,7 @@ I build backend, cloud-connected, and security-aware systems with a focus on rel
 | **Cloud, data & delivery** | AWS EC2, S3, Rekognition, PostgreSQL, Redis, MySQL, Docker Compose, Alembic |
 | **Security & systems** | Splunk, ELK, Wireshark, Nmap, SQLMap, MITRE ATT&CK, AES-128, Double Ratchet, FPGA/RTL |
 
-## Featured projects
+## Projects
 
 ### [Deximon — Pokémon TCG Collector Platform](https://github.com/neelmu12-code/Deximon)
 
@@ -85,7 +85,7 @@ AES-128 encryption and decryption implemented at the register-transfer level in 
 
 `Verilog` | `FPGA` | `RTL Design` | `DE10-Lite`
 
-Selected project repositories are linked above. Additional code walkthroughs are available on request.
+Project repositories are linked above. Additional code walkthroughs are available on request.
 
 ## Experience
 

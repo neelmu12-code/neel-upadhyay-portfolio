@@ -6,11 +6,11 @@ A responsive, dependency-free, multi-page portfolio for Neel Upadhyay, a final-y
 
 ## Highlights
 
-- Featured work includes [Deximon](https://deximon.ca/), an active-development team platform for Pokémon TCG collectors with on-demand AWS EC2 demo hosting, alongside Spring Boot microservices, edge-to-cloud ANPR, applied cryptography, SIEM detection, and FPGA security
+- Projects include [Deximon](https://deximon.ca/), an active-development team platform for Pokémon TCG collectors with on-demand AWS EC2 demo hosting, alongside Spring Boot microservices, edge-to-cloud ANPR, applied cryptography, SIEM detection, and FPGA security
 - Current Blue Team Level 1, CompTIA Security+, and AWS Certified Cloud Practitioner credentials
 - Grouped language, framework, cloud, data, and security stack
 - Two primary résumé choices for Software Engineering and Cybersecurity, plus four specialized versions
-- Dedicated Work, Experience, Credentials, Stack, and Contact pages instead of one long scrolling document
+- Dedicated Projects, Experience, Credentials, Skills, and Contact pages instead of one long scrolling document
 - Mobile-first navigation, reduced-motion support, keyboard focus states, semantic metadata, and connected profile/project structured data
 - No production framework or runtime dependency
 
@@ -37,7 +37,7 @@ npm.cmd test
 │   ├── resume/          # Role-specific PDF résumés
 │   └── video/           # Short project demos
 ├── index.html           # Home page and structured metadata
-├── work.html            # Featured projects and technical labs
+├── work.html            # Projects and technical labs
 ├── experience.html      # Experience, education, and résumés
 ├── credentials.html     # Verified certifications
 ├── skills.html          # Technical stack and working principles
