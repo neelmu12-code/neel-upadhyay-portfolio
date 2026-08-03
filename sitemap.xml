@@ -5,21 +5,17 @@
 >
   <url>
     <loc>https://neelupadhyay.ca/</loc>
-    <lastmod>2026-07-27</lastmod>
-    <image:image>
-      <image:loc>https://neelupadhyay.ca/assets/images/neel-upadhyay-portrait.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://neelupadhyay.ca/assets/images/deximon-live-home.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://neelupadhyay.ca/assets/images/anpr-capstone-showcase.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://neelupadhyay.ca/assets/images/omni-nexus-auctions-card.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://neelupadhyay.ca/assets/images/systems-cloud-security-banner.jpg</image:loc>
-    </image:image>
+    <lastmod>2026-08-03</lastmod>
+    <image:image><image:loc>https://neelupadhyay.ca/assets/images/neel-upadhyay-portrait.jpg</image:loc></image:image>
+    <image:image><image:loc>https://neelupadhyay.ca/assets/images/deximon-live-home.png</image:loc></image:image>
+    <image:image><image:loc>https://neelupadhyay.ca/assets/images/anpr-capstone-showcase.jpg</image:loc></image:image>
+    <image:image><image:loc>https://neelupadhyay.ca/assets/images/omni-nexus-auctions-card.png</image:loc></image:image>
+    <image:image><image:loc>https://neelupadhyay.ca/assets/images/systems-cloud-security-banner.jpg</image:loc></image:image>
+    <image:image><image:loc>https://neelupadhyay.ca/assets/images/og-portfolio.png</image:loc></image:image>
   </url>
+  <url><loc>https://neelupadhyay.ca/work.html</loc><lastmod>2026-08-03</lastmod></url>
+  <url><loc>https://neelupadhyay.ca/experience.html</loc><lastmod>2026-08-03</lastmod></url>
+  <url><loc>https://neelupadhyay.ca/credentials.html</loc><lastmod>2026-08-03</lastmod></url>
+  <url><loc>https://neelupadhyay.ca/skills.html</loc><lastmod>2026-08-03</lastmod></url>
+  <url><loc>https://neelupadhyay.ca/contact.html</loc><lastmod>2026-08-03</lastmod></url>
 </urlset>

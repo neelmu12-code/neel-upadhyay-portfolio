@@ -6,7 +6,7 @@ const path = require("path");
 const ROOT = __dirname;
 const CUSTOM_HOST = "neelupadhyay.ca";
 const CUSTOM_ORIGIN = `https://${CUSTOM_HOST}`;
-const LAST_SIGNIFICANT_UPDATE = "2026-07-27";
+const LAST_SIGNIFICANT_UPDATE = "2026-08-03";
 const LEGACY_PAGES_DOMAIN =
   "neelmu12-code.github.io" + "/neel-upadhyay-portfolio";
 const EXPECTED_RESUMES = [
@@ -636,9 +636,9 @@ function validateHostingFiles() {
   }
 }
 
-function validateResumeReferences(indexDocument) {
+function validateResumeReferences(htmlDocuments) {
   const referencedPaths = new Set(
-    indexDocument.references.map((reference) => {
+    [...htmlDocuments.values()].flatMap((document) => document.references).map((reference) => {
       const pathPart = safeDecode(
         reference.value.split("#")[0].split("?")[0],
         reference.context
@@ -653,7 +653,7 @@ function validateResumeReferences(indexDocument) {
       fail(`${resumePath}: expected résumé PDF is missing`);
     }
     if (!referencedPaths.has(resumePath)) {
-      fail(`index.html: résumé PDF is not referenced: "${resumePath}"`);
+      fail(`HTML pages: résumé PDF is not referenced: "${resumePath}"`);
     }
   }
 }
@@ -684,7 +684,7 @@ if (!indexDocument) {
   fail("index.html: required file is missing");
 } else {
   validateProductionMetadata(indexDocument);
-  validateResumeReferences(indexDocument);
+  validateResumeReferences(htmlDocuments);
 }
 
 validateLegacyDomain();

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Selected Work | Neel Upadhyay</title>
+    <meta name="description" content="Selected backend, cloud, real-time systems, and cybersecurity projects by Neel Upadhyay." />
+    <meta name="theme-color" content="#f4f3ef" />
+    <link rel="canonical" href="https://neelupadhyay.ca/work.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css?v=20260803" />
+    <script>document.documentElement.classList.add("js");</script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header" data-site-header>
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Neel Upadhyay home"><span class="brand-mark" aria-hidden="true">NU</span><span class="brand-copy"><strong>Neel Upadhyay</strong><span>Software engineer</span></span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span class="sr-only">Toggle navigation</span><span></span><span></span></button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary" data-site-nav>
+          <a href="work.html" aria-current="page">Work</a><a href="experience.html">Experience</a><a href="credentials.html">Credentials</a><a href="skills.html">Stack</a><a class="nav-cta" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="page-hero shell">
+        <div class="page-hero-grid">
+          <div class="reveal"><p class="eyebrow">Selected work</p><h1>Systems that leave the diagram.</h1></div>
+          <div class="page-hero-copy reveal"><p>My strongest projects connect devices, services, databases, security, and UI into a working whole.</p><p class="page-number" aria-hidden="true">01</p></div>
+        </div>
+      </section>
+
+      <section class="section-block shell" aria-label="Featured projects">
+        <article class="project-case reveal" id="deximon">
+          <figure class="project-case-media">
+            <img src="assets/images/deximon-live-home.png" alt="Deximon landing page for Pokémon trading card collectors" width="2112" height="764" loading="eager" />
+          </figure>
+          <div class="project-case-copy">
+            <p class="eyebrow">01 · Full-stack cloud platform</p>
+            <h2>Deximon</h2>
+            <p>A social platform for Pokémon TCG collectors with secure accounts, digital binders, card scanning and matching, marketplace listings, conversations, notifications, and seller reviews.</p>
+            <dl class="project-facts">
+              <div><dt>My role</dt><dd>Auth, scanner service, AWS preparation, real-time chat reliability</dd></div>
+              <div><dt>Architecture</dt><dd>Next.js web · FastAPI services · PostgreSQL · Redis</dd></div>
+              <div><dt>Status</dt><dd>Active team development · EC2 demo hosted on demand</dd></div>
+            </dl>
+            <div class="tag-row" aria-label="Deximon technologies"><span>Next.js</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span><span>AWS</span><span>OCR</span></div>
+            <div class="project-actions">
+              <a class="button button-primary" href="https://deximon.ca/" target="_blank" rel="noopener noreferrer" aria-label="Visit the live Deximon application (opens in a new tab)">Visit live site ↗</a>
+              <a class="button button-secondary" href="https://github.com/neelmu12-code/Deximon" target="_blank" rel="noopener noreferrer" aria-label="View the Deximon repository on GitHub (opens in a new tab)">View source ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-case reveal" id="urbansight">
+          <figure class="project-case-media">
+            <video controls muted playsinline preload="metadata" poster="assets/images/anpr-capstone-showcase.jpg" width="900" height="1600" aria-label="Six-second UrbanSight ANPR capstone prototype demo">
+              <source src="assets/video/anpr-live-demo.mp4" type="video/mp4" />
+              <a href="assets/video/anpr-live-demo.mp4">Open the UrbanSight prototype video</a>
+            </video>
+          </figure>
+          <div class="project-case-copy">
+            <p class="eyebrow">02 · Real-time edge system</p>
+            <h2>UrbanSight</h2>
+            <p>A Jetson Nano system that turns camera detections into structured plate events, adds GPS metadata, and streams them to an AWS-hosted backend and live React dashboard.</p>
+            <dl class="project-facts">
+              <div><dt>My role</dt><dd>Cross-network backend connection and operator controls</dd></div>
+              <div><dt>Flow</dt><dd>Edge detection → REST API → WebSocket → live dashboard</dd></div>
+              <div><dt>Result</dt><dd>Searchable SQL history and a live operator view</dd></div>
+            </dl>
+            <div class="tag-row" aria-label="UrbanSight technologies"><span>Python</span><span>AWS EC2</span><span>React</span><span>SQL</span><span>WebSockets</span></div>
+            <div class="project-actions"><a class="button button-primary" href="https://github.com/neelmu12-code/parking-management-system" target="_blank" rel="noopener noreferrer" aria-label="View UrbanSight on GitHub (opens in a new tab)">View source ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-case reveal" id="omni-nexus">
+          <figure class="project-case-media contain">
+            <img src="assets/images/omni-nexus-auctions-card.png" alt="Omni-Nexus auction marketplace interface" width="1200" height="908" loading="lazy" />
+          </figure>
+          <div class="project-case-copy">
+            <p class="eyebrow">03 · Microservices platform</p>
+            <h2>Omni-Nexus</h2>
+            <p>An auction marketplace organized across six Spring Boot services for users, catalogue, auctions, payments, AI assistance, and gateway routing.</p>
+            <dl class="project-facts">
+              <div><dt>My role</dt><dd>API gateway, TLS, token handling, authentication, integration fixes</dd></div>
+              <div><dt>Structure</dt><dd>Six services with isolated MySQL schemas</dd></div>
+              <div><dt>Runtime</dt><dd>JWT-protected routes and Docker Compose orchestration</dd></div>
+            </dl>
+            <div class="tag-row" aria-label="Omni-Nexus technologies"><span>Java</span><span>Spring Boot</span><span>MySQL</span><span>Docker</span><span>React</span></div>
+            <div class="project-actions"><a class="button button-primary" href="https://github.com/neelmu12-code/Auction-e-Commerce-System" target="_blank" rel="noopener noreferrer" aria-label="View Omni-Nexus on GitHub (opens in a new tab)">View source ↗</a></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section-block shell" aria-labelledby="lab-title">
+        <div class="section-heading reveal"><div><p class="section-label">Additional labs</p><h2 id="lab-title">Smaller projects, focused technical depth.</h2></div><p>Applied security and systems work where the implementation is the proof.</p></div>
+        <div class="lab-list reveal">
+          <article class="lab-item"><span class="label">Detection engineering</span><h3>SIEM &amp; Threat Hunting Lab</h3><p>Ingested Windows and Linux telemetry into Splunk and ELK, simulated controlled attacks, and built MITRE ATT&amp;CK-mapped detections.</p><div class="tag-row"><span>Splunk</span><span>ELK</span><span>MITRE ATT&amp;CK</span></div></article>
+          <article class="lab-item"><span class="label">Applied cryptography</span><h3>Double Ratchet Messaging</h3><p>Implemented DH and symmetric KDF ratchets in Python for unique per-message keys, forward secrecy, and break-in recovery.</p><div class="tag-row"><span>Python</span><span>Diffie-Hellman</span><span>AES</span></div></article>
+          <article class="lab-item"><span class="label">Hardware security</span><h3>AES-128 on FPGA</h3><p>Built the AES encryption and decryption pipeline at register-transfer level, including key expansion, transforms, memory, and FSM control.</p><a class="text-link" href="https://github.com/neelmu12-code/AES-128-FPGA-Encryption-system" target="_blank" rel="noopener noreferrer" aria-label="View the AES-128 FPGA project on GitHub (opens in a new tab)">View source <span>↗</span></a></article>
+          <article class="lab-item"><span class="label">Application security</span><h3>Web App Assessment</h3><p>Identified SQL injection paths in a personal full-stack application, then remediated them with parameterized queries and stricter validation.</p><div class="tag-row"><span>SQLMap</span><span>SQL</span><span>Remediation</span></div></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner"><div><p class="footer-title">Let’s build something dependable.</p><p class="footer-copy">Open to backend, cloud, and security-focused opportunities beginning January 2027.</p></div><nav class="footer-nav" aria-label="Footer"><a href="index.html">Home</a><a href="experience.html">Experience</a><a href="credentials.html">Credentials</a><a href="skills.html">Stack</a><a href="contact.html">Contact</a></nav></div>
+      <div class="footer-bottom"><span>© <span data-year></span> Neel Upadhyay</span><span>Ontario, Canada</span></div>
+    </footer>
+    <script src="script.js?v=20260803" defer></script>
+  </body>
+</html>

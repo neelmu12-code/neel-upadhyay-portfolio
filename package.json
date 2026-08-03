@@ -2,7 +2,8 @@
   "name": "neel-upadhyay-portfolio",
   "private": true,
   "scripts": {
+    "build": "node build.js",
     "start": "node server.js",
-    "test": "node --check script.js && node --check server.js && node --check validate.js && node validate.js"
+    "test": "node --check script.js && node --check server.js && node --check build.js && node --check validate.js && node validate.js"
   }
 }
