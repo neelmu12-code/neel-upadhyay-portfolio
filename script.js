@@ -5,6 +5,11 @@ const nav = document.querySelector("[data-site-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const revealElements = document.querySelectorAll(".reveal");
 const yearNodes = document.querySelectorAll("[data-year]");
+const videoTrigger = document.querySelector("[data-video-open]");
+const videoDialog = document.querySelector("[data-video-dialog]");
+const videoClose = document.querySelector("[data-video-close]");
+const videoPlayer = document.querySelector("[data-video-player]");
+let videoOpener = null;
 
 yearNodes.forEach((node) => {
   node.textContent = String(new Date().getFullYear());
@@ -63,6 +68,66 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 980) {
     closeNav();
   }
+});
+
+const closeVideoDialog = () => {
+  if (videoDialog?.open) {
+    videoDialog.close();
+  }
+};
+
+videoTrigger?.addEventListener("click", () => {
+  if (typeof videoDialog?.showModal !== "function") {
+    window.location.href = "assets/video/anpr-live-demo.mp4";
+    return;
+  }
+
+  videoOpener = document.activeElement;
+  closeNav();
+  videoDialog.showModal();
+  document.documentElement.classList.add("video-modal-open");
+
+  try {
+    videoPlayer.currentTime = 0;
+  } catch {
+    // The video timeline may not be ready until playback begins.
+  }
+
+  videoPlayer?.play()?.catch(() => {
+    // Controls remain available if autoplay is blocked.
+  });
+  videoClose?.focus({ preventScroll: true });
+});
+
+videoClose?.addEventListener("click", closeVideoDialog);
+
+videoDialog?.addEventListener("cancel", (event) => {
+  event.preventDefault();
+  closeVideoDialog();
+});
+
+videoDialog?.addEventListener("click", (event) => {
+  if (event.target === videoDialog) {
+    closeVideoDialog();
+  }
+});
+
+videoDialog?.addEventListener("close", () => {
+  videoPlayer?.pause();
+
+  try {
+    videoPlayer.currentTime = 0;
+  } catch {
+    // Nothing to reset before the timeline is ready.
+  }
+
+  document.documentElement.classList.remove("video-modal-open");
+
+  if (videoOpener?.isConnected) {
+    videoOpener.focus({ preventScroll: true });
+  }
+
+  videoOpener = null;
 });
 
 if ("IntersectionObserver" in window) {

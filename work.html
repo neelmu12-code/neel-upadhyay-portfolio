@@ -29,8 +29,8 @@
     <main id="main-content">
       <section class="page-hero shell">
         <div class="page-hero-grid">
-          <div class="reveal"><p class="eyebrow">Selected work</p><h1>Systems that leave the diagram.</h1></div>
-          <div class="page-hero-copy reveal"><p>My strongest projects connect devices, services, databases, security, and UI into a working whole.</p><p class="page-number" aria-hidden="true">01</p></div>
+          <div class="reveal"><p class="eyebrow">Selected work</p><h1>Software projects.</h1></div>
+          <div class="page-hero-copy reveal"><p>Full-stack, real-time, cloud, and security projects with source code and live demos where available.</p></div>
         </div>
       </section>
 
@@ -43,7 +43,7 @@
             <figcaption class="media-caption"><span>Live product</span><strong>deximon.ca ↗</strong></figcaption>
           </figure>
           <div class="project-case-copy">
-            <p class="eyebrow">01 · Full-stack cloud platform</p>
+            <p class="eyebrow">Full-stack cloud platform</p>
             <h2>Deximon</h2>
             <p>A social platform for Pokémon TCG collectors with secure accounts, digital binders, card scanning and matching, marketplace listings, conversations, notifications, and seller reviews.</p>
             <dl class="project-facts">
@@ -60,27 +60,32 @@
           </div>
         </article>
 
-        <article class="project-case reveal" id="urbansight">
-          <div class="project-case-media project-media-split" aria-label="UrbanSight capstone media">
+        <article class="project-case project-case-urbansight reveal" id="urbansight">
+          <div class="project-case-media project-media-urbansight" aria-label="UrbanSight capstone media">
             <figure class="project-media-primary">
               <img src="assets/images/anpr-capstone-showcase.jpg" alt="UrbanSight capstone banner beside the live license-plate detection monitor and mobile prototype" width="1600" height="1200" loading="lazy" />
             </figure>
-            <a class="project-media-demo" href="assets/video/anpr-live-demo.mp4" aria-label="Open the six-second UrbanSight prototype video">
-              <img src="assets/images/anpr-capstone-prototype.jpeg" alt="UrbanSight mobile prototype detecting a license plate" width="900" height="1600" loading="lazy" />
-              <span class="demo-overlay"><span class="demo-play" aria-hidden="true">▶</span><span><strong>Watch the prototype</strong><small>6-second live demo</small></span></span>
-            </a>
+            <button class="project-video-trigger" type="button" aria-haspopup="dialog" aria-controls="urbansight-video-dialog" data-video-open>
+              <span class="video-trigger-thumb" aria-hidden="true"><img src="assets/images/anpr-capstone-prototype.jpeg" alt="" width="900" height="1600" loading="lazy" /></span>
+              <span class="demo-play" aria-hidden="true">▶</span>
+              <span class="video-trigger-copy"><small>Prototype demo · 6 seconds</small><strong>Watch UrbanSight live</strong></span>
+            </button>
           </div>
-          <div class="project-case-copy">
-            <p class="eyebrow">02 · Real-time edge system</p>
-            <h2>UrbanSight</h2>
-            <p>A Jetson Nano system that turns camera detections into structured plate events, adds GPS metadata, and streams them to an AWS-hosted backend and live React dashboard.</p>
-            <dl class="project-facts">
-              <div><dt>My role</dt><dd>Cross-network backend connection and operator controls</dd></div>
-              <div><dt>Flow</dt><dd>Edge detection → REST API → WebSocket → live dashboard</dd></div>
-              <div><dt>Result</dt><dd>Searchable SQL history and a live operator view</dd></div>
-            </dl>
-            <div class="tag-row" aria-label="UrbanSight technologies"><span>Python</span><span>AWS EC2</span><span>React</span><span>SQL</span><span>WebSockets</span></div>
-            <div class="project-actions"><a class="button button-primary" href="https://github.com/neelmu12-code/parking-management-system" target="_blank" rel="noopener noreferrer" aria-label="View UrbanSight on GitHub (opens in a new tab)">View source ↗</a></div>
+          <div class="project-case-copy project-case-copy-wide">
+            <div class="project-case-summary">
+              <p class="eyebrow">Real-time edge system</p>
+              <h2>UrbanSight</h2>
+              <p>A Jetson Nano system that turns camera detections into structured plate events, adds GPS metadata, and streams them to an AWS-hosted backend and live React dashboard.</p>
+            </div>
+            <div class="project-case-details">
+              <dl class="project-facts">
+                <div><dt>My role</dt><dd>Cross-network backend connection and operator controls</dd></div>
+                <div><dt>Flow</dt><dd>Edge detection → REST API → WebSocket → live dashboard</dd></div>
+                <div><dt>Result</dt><dd>Searchable SQL history and a live operator view</dd></div>
+              </dl>
+              <div class="tag-row" aria-label="UrbanSight technologies"><span>Python</span><span>AWS EC2</span><span>React</span><span>SQL</span><span>WebSockets</span></div>
+              <div class="project-actions"><a class="button button-primary" href="https://github.com/neelmu12-code/parking-management-system" target="_blank" rel="noopener noreferrer" aria-label="View UrbanSight on GitHub (opens in a new tab)">View source ↗</a></div>
+            </div>
           </div>
         </article>
 
@@ -90,7 +95,7 @@
             <figcaption class="media-caption media-caption-overlay"><span>Full-stack platform</span><strong>Six services</strong></figcaption>
           </figure>
           <div class="project-case-copy">
-            <p class="eyebrow">03 · Microservices platform</p>
+            <p class="eyebrow">Microservices platform</p>
             <h2>Omni-Nexus</h2>
             <p>An auction marketplace organized across six Spring Boot services for users, catalogue, auctions, payments, AI assistance, and gateway routing.</p>
             <dl class="project-facts">
@@ -105,7 +110,7 @@
       </section>
 
       <section class="section-block shell" aria-labelledby="lab-title">
-        <div class="section-heading reveal"><div><p class="section-label">Additional labs</p><h2 id="lab-title">Smaller projects, focused technical depth.</h2></div><p>Applied security and systems work where the implementation is the proof.</p></div>
+        <div class="section-heading reveal"><div><p class="section-label">Additional projects</p><h2 id="lab-title">Security and systems labs.</h2></div></div>
         <div class="lab-list reveal">
           <article class="lab-item"><span class="label">Detection engineering</span><h3>SIEM &amp; Threat Hunting Lab</h3><p>Ingested Windows and Linux telemetry into Splunk and ELK, simulated controlled attacks, and built MITRE ATT&amp;CK-mapped detections.</p><div class="tag-row"><span>Splunk</span><span>ELK</span><span>MITRE ATT&amp;CK</span></div></article>
           <article class="lab-item"><span class="label">Applied cryptography</span><h3>Double Ratchet Messaging</h3><p>Implemented DH and symmetric KDF ratchets in Python for unique per-message keys, forward secrecy, and break-in recovery.</p><div class="tag-row"><span>Python</span><span>Diffie-Hellman</span><span>AES</span></div></article>
@@ -114,6 +119,21 @@
         </div>
       </section>
     </main>
+
+    <dialog class="video-dialog" id="urbansight-video-dialog" aria-labelledby="urbansight-video-title" data-video-dialog>
+      <div class="video-dialog-panel">
+        <header class="video-dialog-header">
+          <div><p class="label">UrbanSight prototype</p><h2 id="urbansight-video-title">Live ANPR demo</h2></div>
+          <button class="video-dialog-close" type="button" data-video-close><span>Close</span><span class="video-dialog-close-mark" aria-hidden="true">×</span></button>
+        </header>
+        <div class="video-dialog-stage">
+          <video controls muted playsinline preload="metadata" poster="assets/images/anpr-capstone-prototype.jpeg" width="900" height="1600" aria-label="Six-second UrbanSight ANPR capstone prototype demo" data-video-player>
+            <source src="assets/video/anpr-live-demo.mp4" type="video/mp4" />
+            <a href="assets/video/anpr-live-demo.mp4">Open the UrbanSight prototype video</a>
+          </video>
+        </div>
+      </div>
+    </dialog>
 
     <footer class="site-footer">
       <div class="footer-inner"><div><p class="footer-title">Available January 2027.</p><p class="footer-copy">Open to backend, cloud, and security-focused opportunities.</p></div><nav class="footer-nav" aria-label="Footer"><a href="index.html">Home</a><a href="experience.html">Experience</a><a href="credentials.html">Credentials</a><a href="skills.html">Stack</a><a href="contact.html">Contact</a></nav></div>
