@@ -35,9 +35,12 @@
       </section>
 
       <section class="section-block shell" aria-label="Featured projects">
-        <article class="project-case reveal" id="deximon">
-          <figure class="project-case-media">
-            <img src="assets/images/deximon-live-home.png" alt="Deximon landing page for Pokémon trading card collectors" width="2112" height="764" loading="eager" />
+        <article class="project-case project-case-featured reveal" id="deximon">
+          <figure class="project-case-media project-media-wide">
+            <a class="project-media-link" href="https://deximon.ca/" target="_blank" rel="noopener noreferrer" aria-label="Open the live Deximon application (opens in a new tab)">
+              <img src="assets/images/deximon-live-home.png" alt="Deximon landing page for Pokémon trading card collectors" width="2112" height="764" loading="eager" />
+            </a>
+            <figcaption class="media-caption"><span>Live product</span><strong>deximon.ca ↗</strong></figcaption>
           </figure>
           <div class="project-case-copy">
             <p class="eyebrow">01 · Full-stack cloud platform</p>
@@ -57,12 +60,15 @@
         </article>
 
         <article class="project-case reveal" id="urbansight">
-          <figure class="project-case-media">
-            <video controls muted playsinline preload="metadata" poster="assets/images/anpr-capstone-showcase.jpg" width="900" height="1600" aria-label="Six-second UrbanSight ANPR capstone prototype demo">
-              <source src="assets/video/anpr-live-demo.mp4" type="video/mp4" />
-              <a href="assets/video/anpr-live-demo.mp4">Open the UrbanSight prototype video</a>
-            </video>
-          </figure>
+          <div class="project-case-media project-media-split" aria-label="UrbanSight capstone media">
+            <figure class="project-media-primary">
+              <img src="assets/images/anpr-capstone-showcase.jpg" alt="UrbanSight capstone banner beside the live license-plate detection monitor and mobile prototype" width="1600" height="1200" loading="lazy" />
+            </figure>
+            <a class="project-media-demo" href="assets/video/anpr-live-demo.mp4" aria-label="Open the six-second UrbanSight prototype video">
+              <img src="assets/images/anpr-capstone-prototype.jpeg" alt="UrbanSight mobile prototype detecting a license plate" width="900" height="1600" loading="lazy" />
+              <span class="demo-overlay"><span class="demo-play" aria-hidden="true">▶</span><span><strong>Watch the prototype</strong><small>6-second live demo</small></span></span>
+            </a>
+          </div>
           <div class="project-case-copy">
             <p class="eyebrow">02 · Real-time edge system</p>
             <h2>UrbanSight</h2>
@@ -78,8 +84,9 @@
         </article>
 
         <article class="project-case reveal" id="omni-nexus">
-          <figure class="project-case-media contain">
+          <figure class="project-case-media project-media-screen">
             <img src="assets/images/omni-nexus-auctions-card.png" alt="Omni-Nexus auction marketplace interface" width="1200" height="908" loading="lazy" />
+            <figcaption class="media-caption media-caption-overlay"><span>Full-stack platform</span><strong>Six services</strong></figcaption>
           </figure>
           <div class="project-case-copy">
             <p class="eyebrow">03 · Microservices platform</p>
